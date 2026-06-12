@@ -1,0 +1,143 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm) var(--space-xl);
+  min-height: 44px;
+  min-width: 44px;
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn--primary {
+  background-color: var(--color-leaf-500);
+  color: var(--color-neutral-0);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-leaf-600);
+}
+
+.btn--primary:disabled {
+  background-color: var(--color-neutral-300);
+  cursor: not-allowed;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-neutral-0);
+  border: 2px solid rgb(255 255 255 / 0.7);
+}
+
+.btn--outline:hover {
+  background-color: rgb(255 255 255 / 0.1);
+}
+
+/* Waitlist form */
+.waitlist-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  max-width: 480px;
+}
+
+.waitlist-form input[type="email"] {
+  flex: 1;
+  min-width: 220px;
+  padding: var(--space-sm) var(--space-md);
+  min-height: 44px;
+  border: 2px solid rgb(255 255 255 / 0.6);
+  border-radius: var(--radius-full);
+  background: rgb(255 255 255 / 0.15);
+  color: var(--color-neutral-0);
+  font-size: var(--font-size-md);
+  backdrop-filter: blur(4px);
+  transition: border-color var(--transition-fast);
+}
+
+.waitlist-form input[type="email"]::placeholder {
+  color: rgb(255 255 255 / 0.6);
+}
+
+.waitlist-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--color-neutral-0);
+}
+
+/* Form message */
+.form-message {
+  width: 100%;
+  font-size: var(--font-size-sm);
+  min-height: 1.25rem;
+}
+
+.form-message--success { color: var(--color-leaf-200); }
+.form-message--info    { color: var(--color-soil-200); }
+.form-message--error   { color: var(--color-bloom-300); }
+
+/* Store badges */
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.store-badge {
+  display: inline-block;
+  transition: transform var(--transition-fast);
+}
+
+.store-badge:hover {
+  transform: scale(1.03);
+}
+
+/* Section CTA (below features) */
+.section-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-2xl);
+}
+
+.section-cta .waitlist-form input[type="email"] {
+  border-color: var(--color-leaf-300);
+  background: var(--color-neutral-0);
+  color: var(--color-neutral-800);
+}
+
+.section-cta .waitlist-form input[type="email"]::placeholder {
+  color: var(--color-neutral-400);
+}
+
+.section-cta .form-message--success { color: var(--color-leaf-700); }
+.section-cta .form-message--info    { color: var(--color-soil-600); }
+.section-cta .form-message--error   { color: var(--color-bloom-600); }
+
+/* Download section CTA */
+.download-section__cta .waitlist-form {
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .waitlist-form {
+    flex-direction: column;
+  }
+
+  .waitlist-form input[type="email"] {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .store-badges {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

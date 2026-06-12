@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tenderly — nurture your friendships like the plants they are. Download the app and watch your relationships bloom." />
+  <meta property="og:title" content="Tenderly — Grow Your Friendships" />
+  <meta property="og:description" content="Nurture your friendships like the plants they are. Download Tenderly and watch your relationships bloom." />
+  <meta property="og:image" content="/images/og-image.png" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+  <title>Tenderly — Grow Your Friendships</title>
+  <link rel="stylesheet" href="/src/css/global.css" />
+  <link rel="stylesheet" href="/src/css/nav.css" />
+  <link rel="stylesheet" href="/src/css/hero.css" />
+  <link rel="stylesheet" href="/src/css/features.css" />
+  <link rel="stylesheet" href="/src/css/testimonials.css" />
+  <link rel="stylesheet" href="/src/css/cta.css" />
+  <link rel="stylesheet" href="/src/css/footer.css" />
+</head>
+<body>
+  <a href="#main" class="visually-hidden skip-link">Skip to main content</a>
+
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="container nav__inner">
+      <a href="#" class="nav__logo" aria-label="Tenderly home">
+        <svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 28 28">
+          <use href="/src/svg/icons.svg#icon-grow" />
+        </svg>
+        <span>Tenderly</span>
+      </a>
+      <button class="nav__hamburger" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-links" role="list">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#testimonials">Stories</a></li>
+        <li><a href="#download" class="nav__cta-link">Download</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main" role="main">
+
+    <!-- Hero -->
+    <section id="hero" class="hero" aria-labelledby="hero-heading">
+      <div class="hero__bg">
+        <picture>
+          <source srcset="/images/hero-bg.webp" type="image/webp" />
+          <img src="/images/hero-bg.png" alt="" role="presentation" class="hero__bg-img" />
+        </picture>
+        <div class="hero__overlay" aria-hidden="true"></div>
+      </div>
+      <div class="container hero__content">
+        <h1 id="hero-heading" class="hero__headline">
+          Grow the friendships<br />that matter most
+        </h1>
+        <p class="hero__subheadline">
+          Tenderly treats your friendships like the plants they are — gentle reminders,
+          meaningful rituals, and a little water goes a long way.
+        </p>
+        <div id="cta-container" class="hero__cta">
+          <!-- Populated by cta-mode.js -->
+          <noscript>
+            <form class="waitlist-form" action="/api/waitlist" method="POST">
+              <label for="email-noscript" class="visually-hidden">Email address</label>
+              <input type="email" id="email-noscript" name="email" placeholder="you@example.com" required />
+              <button type="submit">Join the waitlist</button>
+            </form>
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features" aria-labelledby="features-heading">
+      <div class="container">
+        <h2 id="features-heading" class="section-heading">Everything your friendships need to flourish</h2>
+        <p class="section-subheading">Simple tools, big impact. Tenderly makes staying close feel natural.</p>
+        <div class="features__grid">
+
+          <article class="feature-card" data-reveal>
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 48 48" focusable="false">
+                <use href="/src/svg/icons.svg#icon-water" />
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Water your friendships</h3>
+            <p class="feature-card__desc">
+              Get gentle nudges when a friendship needs attention — because the best relationships are tended, not forgotten.
+            </p>
+          </article>
+
+          <article class="feature-card" data-reveal>
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 48 48" focusable="false">
+                <use href="/src/svg/icons.svg#icon-grow" />
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Watch them grow</h3>
+            <p class="feature-card__desc">
+              Track the milestones, memories, and moments that show how far you've come — and inspire you to keep going.
+            </p>
+          </article>
+
+          <article class="feature-card" data-reveal>
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 48 48" focusable="false">
+                <use href="/src/svg/icons.svg#icon-remind" />
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Never miss a moment</h3>
+            <p class="feature-card__desc">
+              Birthdays, check-ins, shared traditions — Tenderly remembers the details so you can show up when it counts.
+            </p>
+          </article>
+
+          <article class="feature-card" data-reveal>
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 48 48" focusable="false">
+                <use href="/src/svg/icons.svg#icon-connect" />
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Stay genuinely connected</h3>
+            <p class="feature-card__desc">
+              Move beyond likes and stories. Tenderly helps you reach out with purpose and feel the difference real connection makes.
+            </p>
+          </article>
+
+          <article class="feature-card" data-reveal>
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 48 48" focusable="false">
+                <use href="/src/svg/icons.svg#icon-streak" />
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Build beautiful streaks</h3>
+            <p class="feature-card__desc">
+              Small consistent actions add up. Celebrate the momentum of friendships that keep blooming, season after season.
+            </p>
+          </article>
+
+        </div>
+
+        <div id="cta-container-features" class="section-cta">
+          <!-- Populated by cta-mode.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <h2 id="testimonials-heading" class="section-heading">Real friendships, real growth</h2>
+        <p class="section-subheading">Here's what happens when you tend to the people you love.</p>
+        <div class="testimonials__grid">
+
+          <article class="testimonial-card" data-reveal>
+            <blockquote class="testimonial-card__quote">
+              "I hadn't spoken to my best friend from university in almost a year. Tenderly reminded me to reach out — now we have a weekly call. It sounds small, but it changed everything."
+            </blockquote>
+            <cite class="testimonial-card__cite">
+              <span class="testimonial-card__name">Sarah</span>
+              <span class="testimonial-card__context">Using Tenderly for 4 months</span>
+            </cite>
+          </article>
+
+          <article class="testimonial-card" data-reveal>
+            <blockquote class="testimonial-card__quote">
+              "I always meant to stay in touch with people but life got in the way. Tenderly makes it feel easy — like watering a plant instead of climbing a mountain."
+            </blockquote>
+            <cite class="testimonial-card__cite">
+              <span class="testimonial-card__name">Marcus</span>
+              <span class="testimonial-card__context">Using Tenderly for 6 months</span>
+            </cite>
+          </article>
+
+          <article class="testimonial-card" data-reveal>
+            <blockquote class="testimonial-card__quote">
+              "The milestone tracking is beautiful. Seeing how a friendship has grown over months gives you this quiet sense of pride. I didn't know I needed it until I had it."
+            </blockquote>
+            <cite class="testimonial-card__cite">
+              <span class="testimonial-card__name">Priya</span>
+              <span class="testimonial-card__context">Using Tenderly for 3 months</span>
+            </cite>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section id="download" class="download-section" aria-labelledby="download-heading">
+      <div class="container download-section__inner">
+        <h2 id="download-heading" class="download-section__heading">
+          Your friendships are worth tending
+        </h2>
+        <p class="download-section__subheading">
+          Join thousands of people growing closer to the people they love.
+          Download Tenderly today — it's free to start.
+        </p>
+        <div id="cta-container-bottom" class="download-section__cta">
+          <!-- Populated by cta-mode.js -->
+          <noscript>
+            <form class="waitlist-form" action="/api/waitlist" method="POST">
+              <label for="email-noscript-bottom" class="visually-hidden">Email address</label>
+              <input type="email" id="email-noscript-bottom" name="email" placeholder="you@example.com" required />
+              <button type="submit">Join the waitlist</button>
+            </form>
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">Tenderly</span>
+        <p class="footer__tagline">Nurture the friendships that matter.</p>
+      </div>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Support</a>
+      </nav>
+      <p class="footer__copy">&copy; 2026 Tenderly. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

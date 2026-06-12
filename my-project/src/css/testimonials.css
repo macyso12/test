@@ -1,0 +1,109 @@
+.testimonials {
+  padding-block: var(--space-3xl);
+  background: linear-gradient(160deg, var(--color-leaf-50) 0%, var(--color-soil-100) 100%);
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.testimonial-card {
+  background-color: var(--color-neutral-0);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  /* Scroll-reveal initial state */
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.testimonial-card.visible {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-card {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.testimonial-card::before {
+  content: '\201C';
+  position: absolute;
+  top: var(--space-md);
+  left: var(--space-lg);
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--color-leaf-200);
+  font-family: var(--font-display);
+  pointer-events: none;
+}
+
+.testimonial-card__quote {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-loose);
+  color: var(--color-neutral-700);
+  padding-top: var(--space-xl);
+  margin-bottom: var(--space-lg);
+  font-style: normal;
+  border: none;
+}
+
+.testimonial-card__cite {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  font-style: normal;
+  border-top: 1px solid var(--color-neutral-100);
+  padding-top: var(--space-md);
+}
+
+.testimonial-card__name {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-800);
+}
+
+.testimonial-card__context {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-400);
+}
+
+.download-section {
+  padding-block: var(--space-3xl);
+  background: linear-gradient(135deg, var(--color-leaf-700) 0%, var(--color-leaf-900) 100%);
+  text-align: center;
+}
+
+.download-section__inner {
+  max-width: var(--max-width-narrow);
+}
+
+.download-section__heading {
+  font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-4xl));
+  color: var(--color-neutral-0);
+  margin-bottom: var(--space-md);
+}
+
+.download-section__subheading {
+  color: rgb(255 255 255 / 0.85);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-loose);
+  margin-bottom: var(--space-2xl);
+}
+
+.download-section__cta {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+}

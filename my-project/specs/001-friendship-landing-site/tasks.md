@@ -31,20 +31,20 @@ All paths are relative to `my-project/` (the project root).
 **Purpose**: Bootstrap the Vite project, install dependencies, configure
 tooling. No user-facing code yet.
 
-- [ ] T001 Initialise Node project: create `package.json` with name, version,
+- [x] T001 Initialise Node project: create `package.json` with name, version,
   and scripts (`dev`, `build`, `preview`, `test`, `server`)
-- [ ] T002 Install dependencies: `vite`, `express`, `better-sqlite3` and dev
+- [x] T002 Install dependencies: `vite`, `express`, `better-sqlite3` and dev
   deps `vitest`, `@vitest/coverage-v8`, `eslint`
-- [ ] T003 [P] Create `vite.config.js` with `/api` proxy pointing to
+- [x] T003 [P] Create `vite.config.js` with `/api` proxy pointing to
   `http://localhost:3000` and `public/` as static asset root
-- [ ] T004 [P] Create `eslint.config.js` enforcing ES2022, no-unused-vars,
+- [x] T004 [P] Create `eslint.config.js` enforcing ES2022, no-unused-vars,
   max-complexity 10
-- [ ] T005 [P] Create `.env.example` with
+- [x] T005 [P] Create `.env.example` with
   `VITE_APP_STORE_LIVE=false`, `VITE_GOOGLE_PLAY_LIVE=false`,
   `VITE_APP_STORE_URL=`, `VITE_GOOGLE_PLAY_URL=`, `PORT=3000`
-- [ ] T006 [P] Create `.gitignore` excluding `node_modules/`, `dist/`,
+- [x] T006 [P] Create `.gitignore` excluding `node_modules/`, `dist/`,
   `.env`, `server/data/*.db`
-- [ ] T007 [P] Create empty directory stubs:
+- [x] T007 [P] Create empty directory stubs:
   `src/css/`, `src/js/`, `src/svg/`, `public/images/`,
   `server/routes/`, `server/db/`, `server/data/`,
   `tests/unit/`, `tests/integration/`
@@ -58,31 +58,31 @@ skeleton — shared infrastructure every user story depends on.
 
 **⚠️ CRITICAL**: No user story work begins until this phase is complete.
 
-- [ ] T008 Create `src/css/tokens.css` defining all CSS custom properties:
+- [x] T008 Create `src/css/tokens.css` defining all CSS custom properties:
   colour palette (`--color-leaf-*`, `--color-soil-*`, `--color-bloom-*`,
   `--color-neutral-*`), spacing scale (`--space-xs` through `--space-3xl`),
   typography (`--font-base`, `--font-display`, `--font-size-*`,
   `--line-height-*`), border-radius, shadow, transition tokens
-- [ ] T009 [P] Create `src/css/reset.css` — minimal box-sizing + margin reset
-- [ ] T010 [P] Create `src/css/global.css` importing `tokens.css` and
+- [x] T009 [P] Create `src/css/reset.css` — minimal box-sizing + margin reset
+- [x] T010 [P] Create `src/css/global.css` importing `tokens.css` and
   `reset.css`; set base `font-family`, `color`, `background-color`, `line-height`
   on `:root` and `body`
-- [ ] T011 Create `index.html` with full document shell: `<head>` with charset,
+- [x] T011 Create `index.html` with full document shell: `<head>` with charset,
   viewport, Open Graph meta tags, title, link to `src/css/global.css`, and
   `<body>` with `<nav>`, `<main>` (empty section anchors), `<footer>`, and
   `<script type="module" src="/src/js/main.js">`
-- [ ] T012 Create `src/js/main.js` importing all JS modules
+- [x] T012 Create `src/js/main.js` importing all JS modules
   (`scroll-reveal.js`, `waitlist-form.js`, `cta-mode.js`, `nav.js`) and
   calling their init functions on `DOMContentLoaded`
-- [ ] T013 Create `server/db/schema.js` exporting the `CREATE TABLE IF NOT
+- [x] T013 Create `server/db/schema.js` exporting the `CREATE TABLE IF NOT
   EXISTS waitlist (...)` and index SQL strings (from data-model.md)
-- [ ] T014 Create `server/db/connection.js` that opens `server/data/waitlist.db`
+- [x] T014 Create `server/db/connection.js` that opens `server/data/waitlist.db`
   via `better-sqlite3`, runs schema migrations on startup, and exports the `db`
   instance
-- [ ] T015 Create `server/index.js` as Express entry point: JSON body parser,
+- [x] T015 Create `server/index.js` as Express entry point: JSON body parser,
   CORS header (dev: open; prod: same-origin), mount `routes/waitlist.js` at
   `/api/waitlist`, mount `GET /api/health`, listen on `process.env.PORT`
-- [ ] T016 [P] Write unit test
+- [x] T016 [P] Write unit test
   `tests/unit/db-connection.test.js` — verifies schema initialises without
   error using an in-memory SQLite DB (`:memory:`)
 
@@ -102,34 +102,34 @@ Resize to 375×812 — same content visible, text legible, CTA tappable.
 
 ### Tests for User Story 1 ⚠️ Write FIRST — confirm RED before implementing
 
-- [ ] T017 [P] [US1] Write unit test `tests/unit/cta-mode.test.js` — verifies
+- [x] T017 [P] [US1] Write unit test `tests/unit/cta-mode.test.js` — verifies
   `initCtaMode()` shows waitlist form when `VITE_APP_STORE_LIVE=false` and
   shows store badges when `true`; tests run in jsdom
 
 ### Implementation for User Story 1
 
-- [ ] T018 [US1] Create `src/css/nav.css` — sticky top nav with logo/wordmark
+- [x] T018 [US1] Create `src/css/nav.css` — sticky top nav with logo/wordmark
   on left, anchor links (`#features`, `#testimonials`, `#download`) on right;
   mobile: hamburger collapse; uses only token variables
-- [ ] T019 [US1] Create `src/css/hero.css` — full-viewport hero with
+- [x] T019 [US1] Create `src/css/hero.css` — full-viewport hero with
   background image (`public/images/hero-bg.webp`), overlay gradient using
   `--color-leaf-*`, centred headline + subheadline + CTA button; `picture`
   element for WebP/PNG fallback; mobile-first media queries
-- [ ] T020 [US1] Add `<nav>` markup to `index.html`: logo text, nav links,
+- [x] T020 [US1] Add `<nav>` markup to `index.html`: logo text, nav links,
   skip-to-content link for accessibility
-- [ ] T021 [US1] Add `<section id="hero">` markup to `index.html`: `<picture>`
+- [x] T021 [US1] Add `<section id="hero">` markup to `index.html`: `<picture>`
   hero background, `<h1>` app name, `<p>` value proposition tagline,
   `<div id="cta-container">` (populated by `cta-mode.js`)
-- [ ] T022 [US1] Create `src/js/cta-mode.js` — reads
+- [x] T022 [US1] Create `src/js/cta-mode.js` — reads
   `import.meta.env.VITE_APP_STORE_LIVE` / `VITE_GOOGLE_PLAY_LIVE`; injects
   app-store badge links or waitlist form HTML into `#cta-container`;
   exports `initCtaMode()`
-- [ ] T023 [US1] Create `src/js/nav.js` — smooth-scroll anchor clicks,
+- [x] T023 [US1] Create `src/js/nav.js` — smooth-scroll anchor clicks,
   hamburger toggle for mobile, `IntersectionObserver` active-link highlight;
   exports `initNav()`
-- [ ] T024 [US1] Add hero placeholder images to `public/images/` — 1×1 pixel
+- [x] T024 [US1] Add hero placeholder images to `public/images/` — 1×1 pixel
   WebP and PNG stubs so Vite does not 404 during development
-- [ ] T025 [US1] Verify hero renders above the fold at 1440×900 and 375×812
+- [x] T025 [US1] Verify hero renders above the fold at 1440×900 and 375×812
   by running `npm run dev` and visually confirming layout (document result
   in quickstart.md Scenario 1)
 
@@ -149,37 +149,37 @@ error. (quickstart Scenarios 4 & 5)
 
 ### Tests for User Story 4 ⚠️ Write FIRST — confirm RED before implementing
 
-- [ ] T026 [P] [US4] Write unit test `tests/unit/waitlist-form.test.js` —
+- [x] T026 [P] [US4] Write unit test `tests/unit/waitlist-form.test.js` —
   verifies client-side email validation (`validateEmail()`): empty string →
   false, `bad` → false, `a@b.c` → true, 255-char string → false
-- [ ] T027 [P] [US4] Write integration test
+- [x] T027 [P] [US4] Write integration test
   `tests/integration/waitlist-api.test.js` — spins up Express with an
   in-memory DB; tests POST 201 (new), POST 200 (duplicate), POST 422
   (invalid), GET /api/health 200
 
 ### Implementation for User Story 4
 
-- [ ] T028 [US4] Create `server/routes/waitlist.js` — validates email with
+- [x] T028 [US4] Create `server/routes/waitlist.js` — validates email with
   regex, captures `source` from `req.headers.referer` or `req.query.utm_source`,
   inserts via `db`; returns 201/200/422/500 JSON per contract; rate-limit: 5
   req/IP/min using a simple in-memory Map counter
-- [ ] T029 [US4] Create `src/js/waitlist-form.js` — exports `initWaitlistForm()`;
+- [x] T029 [US4] Create `src/js/waitlist-form.js` — exports `initWaitlistForm()`;
   attaches `submit` listener to `#waitlist-form` if present; validates email
   client-side; `fetch`es `POST /api/waitlist`; updates `#form-message` with
   success/duplicate/error text; disables submit button during request
-- [ ] T030 [US4] Create `src/css/cta.css` — styles for waitlist form
+- [x] T030 [US4] Create `src/css/cta.css` — styles for waitlist form
   (input + button inline on desktop, stacked on mobile), app-store badge
   buttons, `#form-message` status text (success = `--color-leaf-*`, error =
   `--color-bloom-*`); all sizes use token variables; button min touch target
   44×44 px
-- [ ] T031 [US4] Add `<section id="download">` markup to `index.html` with
+- [x] T031 [US4] Add `<section id="download">` markup to `index.html` with
   `<div id="cta-container-bottom">` mirroring hero CTA; `initCtaMode()` must
   populate both containers
-- [ ] T032 [US4] Update `src/js/cta-mode.js` to populate both
+- [x] T032 [US4] Update `src/js/cta-mode.js` to populate both
   `#cta-container` (hero) and `#cta-container-bottom` (download section)
-- [ ] T033 [US4] Add `<noscript>` fallback form to `index.html` inside
+- [x] T033 [US4] Add `<noscript>` fallback form to `index.html` inside
   `#cta-container` that POSTs directly to `/api/waitlist` (no-JS path per FR-007)
-- [ ] T034 [US4] Run integration tests (`npm test`) — confirm all green
+- [x] T034 [US4] Run integration tests (`npm test`) — confirm all green
 
 **Checkpoint**: US4 fully functional. Waitlist submission works end-to-end.
 App-store CTAs render when env flags are true. No-JS form present.
@@ -197,28 +197,28 @@ on scroll (quickstart Scenario 2).
 
 ### Implementation for User Story 2
 
-- [ ] T035 [US2] Create `src/svg/icons.svg` — inline SVG sprite with symbols
+- [x] T035 [US2] Create `src/svg/icons.svg` — inline SVG sprite with symbols
   for at least five icons: `icon-water` (watering can), `icon-grow`
   (sprouting plant), `icon-remind` (bell/calendar), `icon-connect`
   (two figures), `icon-streak` (fire/chain); each as `<symbol id="...">` with
   `viewBox`
-- [ ] T036 [P] [US2] Create `src/css/features.css` — CSS grid of feature
+- [x] T036 [P] [US2] Create `src/css/features.css` — CSS grid of feature
   cards (3-col desktop, 1-col mobile); each card: icon (48×48 px SVG),
   `<h3>` title, `<p>` benefit copy; initial state for scroll-reveal:
   `opacity: 0; transform: translateY(24px)`; `.visible` state:
   `opacity: 1; transform: none; transition: 400ms ease`
-- [ ] T037 [US2] Add `<section id="features">` markup to `index.html` with
+- [x] T037 [US2] Add `<section id="features">` markup to `index.html` with
   three (minimum) `<article class="feature-card">` elements, each containing
   a `<svg><use href="/src/svg/icons.svg#icon-*">`, `<h3>`, and `<p>` — copy
   uses plant/nurturing metaphor for each feature (e.g. "Water your friendships",
   "Watch them grow", "Never miss a moment")
-- [ ] T038 [US2] Create `src/js/scroll-reveal.js` — exports `initScrollReveal()`;
+- [x] T038 [US2] Create `src/js/scroll-reveal.js` — exports `initScrollReveal()`;
   uses `IntersectionObserver` (threshold 0.15) to add `.visible` class to all
   `.feature-card`, `.testimonial-card`, and `[data-reveal]` elements as they
   enter the viewport; respects `prefers-reduced-motion` (skips animation)
-- [ ] T039 [US2] Add second CTA (`#cta-container-features`) below feature
+- [x] T039 [US2] Add second CTA (`#cta-container-features`) below feature
   cards in `index.html`; update `cta-mode.js` to populate it
-- [ ] T040 [US2] Verify scroll-reveal works and three feature cards render
+- [x] T040 [US2] Verify scroll-reveal works and three feature cards render
   correctly at 375 px and 1440 px widths (document in quickstart Scenario 2)
 
 **Checkpoint**: US2 fully functional. Feature cards visible, animated, benefit-
@@ -237,18 +237,18 @@ Scenario 3).
 
 ### Implementation for User Story 3
 
-- [ ] T041 [US3] Create `src/css/testimonials.css` — card layout (2-col
+- [x] T041 [US3] Create `src/css/testimonials.css` — card layout (2-col
   desktop, 1-col mobile); each card: quotation mark decoration, `<blockquote>`,
   `<cite>` with name + context; uses token colours and spacing; initial hidden
   state for scroll-reveal
-- [ ] T042 [US3] Add `<section id="testimonials">` markup to `index.html`
+- [x] T042 [US3] Add `<section id="testimonials">` markup to `index.html`
   with two (minimum) `<article class="testimonial-card">` elements; each
   with `<blockquote>`, `<cite>` (first name + context string e.g. "using the
   app for 3 months"); placeholder copy that matches plant/nurturing tone
-- [ ] T043 [US3] Add `<section id="download">` CTA block immediately after
+- [x] T043 [US3] Add `<section id="download">` CTA block immediately after
   testimonials in `index.html` (this is the bottom download section from T031;
   confirm it renders within one viewport height of last testimonial card)
-- [ ] T044 [US3] Verify testimonial cards animate in via scroll-reveal and CTA
+- [x] T044 [US3] Verify testimonial cards animate in via scroll-reveal and CTA
   is within one viewport height below last card (document in quickstart
   Scenario 3)
 
@@ -261,30 +261,30 @@ immediately follows.
 
 **Purpose**: Performance, accessibility, footer, final QA, and CI gate.
 
-- [ ] T045 [P] Create `src/css/footer.css` — dark background footer with app
+- [x] T045 [P] Create `src/css/footer.css` — dark background footer with app
   name, tagline, placeholder links for Privacy Policy and Support, copyright
   line; mobile-responsive
-- [ ] T046 [P] Add `<footer>` markup to `index.html` with app name, tagline,
+- [x] T046 [P] Add `<footer>` markup to `index.html` with app name, tagline,
   `<a href="#">Privacy Policy</a>`, `<a href="#">Support</a>`, copyright
-- [ ] T047 Audit colour contrast for all text/background combinations in
+- [x] T047 Audit colour contrast for all text/background combinations in
   `tokens.css` against WCAG 2.1 AA (4.5:1 normal text, 3:1 large text);
   adjust token values as needed
-- [ ] T048 [P] Add `aria-label` to all icon-only buttons; verify all interactive
+- [x] T048 [P] Add `aria-label` to all icon-only buttons; verify all interactive
   elements are keyboard-reachable (tab order logical); add `role="main"` to
   `<main>`, `role="navigation"` to `<nav>`
-- [ ] T049 Run `npm run build` and `npm run preview`; run Lighthouse Mobile
+- [x] T049 Run `npm run build` and `npm run preview`; run Lighthouse Mobile
   audit on `http://localhost:4173`; confirm Performance ≥ 90 and no
   render-blocking resources; document score in quickstart Scenario 7
-- [ ] T050 [P] Add `<meta name="description">`, `<meta property="og:image">`,
+- [x] T050 [P] Add `<meta name="description">`, `<meta property="og:image">`,
   `<meta property="og:title">`, `<meta property="og:description">`, and
   `<link rel="icon">` placeholder to `<head>` in `index.html`
-- [ ] T051 [P] Verify no-JS fallback: disable JavaScript in DevTools, reload
+- [x] T051 [P] Verify no-JS fallback: disable JavaScript in DevTools, reload
   `http://localhost:5173`, confirm hero headline and `<noscript>` form are
   visible (quickstart Scenario 6)
-- [ ] T052 Run full test suite (`npm test`) and confirm all tests green with
+- [x] T052 Run full test suite (`npm test`) and confirm all tests green with
   ≥ 80% coverage on `server/` code
-- [ ] T053 Run ESLint (`npx eslint src/ server/`) — zero errors
-- [ ] T054 [P] Update `README.md` (or create if absent) with setup, dev,
+- [x] T053 Run ESLint (`npx eslint src/ server/`) — zero errors
+- [x] T054 [P] Update `README.md` (or create if absent) with setup, dev,
   build, and test commands
 
 ---
