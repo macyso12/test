@@ -229,9 +229,9 @@
 }
 
 .faq__item {
-  background-color: var(--color-neutral-0);
+  background-color: var(--color-neutral-50);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-neutral-200);
   overflow: hidden;
   opacity: 0;
   transform: translateY(16px);
@@ -260,14 +260,10 @@
   cursor: pointer;
   list-style: none;
   user-select: none;
-  transition: background-color var(--transition-fast);
 }
 
 .faq__question::-webkit-details-marker { display: none; }
 
-.faq__question:hover {
-  background-color: var(--color-neutral-50);
-}
 
 .faq__chevron {
   color: var(--color-sage-500);
