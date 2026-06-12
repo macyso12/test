@@ -429,8 +429,11 @@
 }
 
 .download-section__cta .waitlist-form {
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  margin-inline: auto;
 }
 
 @media (max-width: 768px) {
