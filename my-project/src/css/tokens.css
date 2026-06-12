@@ -1,45 +1,69 @@
 :root {
-  /* Colour — Leaf (primary green) */
-  --color-leaf-50: #f0fdf4;
-  --color-leaf-100: #dcfce7;
-  --color-leaf-200: #bbf7d0;
-  --color-leaf-300: #86efac;
-  --color-leaf-400: #4ade80;
-  --color-leaf-500: #22c55e;
-  --color-leaf-600: #16a34a;
-  --color-leaf-700: #15803d;
-  --color-leaf-800: #166534;
-  --color-leaf-900: #14532d;
+  /* ── Brand: Soft Sage (primary) ── */
+  --color-sage-50:  #f2f8f3;
+  --color-sage-100: #e1f0e3;
+  --color-sage-200: #d4e8d5;   /* Mint */
+  --color-sage-300: #bbdabc;
+  --color-sage-400: #a8cca9;
+  --color-sage-500: #9dbe9e;   /* Soft Sage */
+  --color-sage-600: #7fa882;
+  --color-sage-700: #5c8a62;
+  --color-sage-800: #3d6642;
+  --color-sage-900: #2a4a2e;
 
-  /* Colour — Soil (warm brown) */
-  --color-soil-100: #fdf8f0;
-  --color-soil-200: #f5e6d0;
-  --color-soil-300: #e8c99a;
-  --color-soil-400: #d4a96a;
-  --color-soil-500: #b8864a;
-  --color-soil-600: #92622e;
-  --color-soil-700: #6b4423;
+  /* ── Brand: Terracotta (accent) ── */
+  --color-terra-100: #f5e4db;
+  --color-terra-200: #e8c4ae;
+  --color-terra-300: #d99e7e;
+  --color-terra-400: #cc8460;
+  --color-terra-500: #c1704a;  /* Terracotta */
+  --color-terra-600: #a85c38;
+  --color-terra-700: #8a4728;
 
-  /* Colour — Bloom (accent pink/rose) */
-  --color-bloom-300: #fda4af;
-  --color-bloom-400: #fb7185;
-  --color-bloom-500: #f43f5e;
-  --color-bloom-600: #e11d48;
+  /* ── Brand: Warm neutrals ── */
+  --color-warm-white: #faf8f2; /* Warm White */
+  --color-sand:       #e8e2d6; /* Sand */
+  --color-soil:       #5c3d2e; /* Soil Brown */
 
-  /* Colour — Neutral */
+  /* ── Neutrals ── */
   --color-neutral-0:   #ffffff;
-  --color-neutral-50:  #f9fafb;
-  --color-neutral-100: #f3f4f6;
-  --color-neutral-200: #e5e7eb;
-  --color-neutral-300: #d1d5db;
-  --color-neutral-400: #9ca3af;
-  --color-neutral-500: #6b7280;
-  --color-neutral-600: #4b5563;
-  --color-neutral-700: #374151;
-  --color-neutral-800: #1f2937;
-  --color-neutral-900: #111827;
+  --color-neutral-50:  #faf8f2;  /* Warm White */
+  --color-neutral-100: #f0ebe0;
+  --color-neutral-200: #e8e2d6;  /* Sand */
+  --color-neutral-300: #d4c9b8;
+  --color-neutral-400: #b8a898;
+  --color-neutral-500: #8b7b6b;
+  --color-neutral-600: #6b5c4e;
+  --color-neutral-700: #4a3d32;
+  --color-neutral-800: #2e2318;
+  --color-neutral-900: #1a140e;
 
-  /* Spacing scale */
+  /* ── Legacy aliases (keep CSS working without rename) ── */
+  --color-leaf-50:  var(--color-sage-50);
+  --color-leaf-100: var(--color-sage-100);
+  --color-leaf-200: var(--color-sage-200);
+  --color-leaf-300: var(--color-sage-300);
+  --color-leaf-400: var(--color-sage-400);
+  --color-leaf-500: var(--color-sage-500);
+  --color-leaf-600: var(--color-sage-600);
+  --color-leaf-700: var(--color-sage-700);
+  --color-leaf-800: var(--color-sage-800);
+  --color-leaf-900: var(--color-sage-900);
+
+  --color-soil-100: #faf8f2;
+  --color-soil-200: #f0ebe0;
+  --color-soil-300: var(--color-sand);
+  --color-soil-400: var(--color-neutral-300);
+  --color-soil-500: var(--color-neutral-400);
+  --color-soil-600: var(--color-neutral-500);
+  --color-soil-700: var(--color-soil);
+
+  --color-bloom-300: var(--color-terra-300);
+  --color-bloom-400: var(--color-terra-400);
+  --color-bloom-500: var(--color-terra-500);
+  --color-bloom-600: var(--color-terra-600);
+
+  /* ── Spacing ── */
   --space-xs:   0.25rem;
   --space-sm:   0.5rem;
   --space-md:   1rem;
@@ -48,7 +72,7 @@
   --space-2xl:  3rem;
   --space-3xl:  4.5rem;
 
-  /* Typography */
+  /* ── Typography ── */
   --font-base:    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-display: Georgia, 'Times New Roman', serif;
 
@@ -71,25 +95,23 @@
   --font-weight-semibold: 600;
   --font-weight-bold:     700;
 
-  /* Border radius */
+  /* ── Radius / Shadow / Transition ── */
   --radius-sm:   0.25rem;
   --radius-md:   0.5rem;
   --radius-lg:   1rem;
   --radius-xl:   1.5rem;
   --radius-full: 9999px;
 
-  /* Shadows */
   --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px rgb(0 0 0 / 0.07), 0 2px 4px rgb(0 0 0 / 0.06);
   --shadow-lg: 0 10px 15px rgb(0 0 0 / 0.1), 0 4px 6px rgb(0 0 0 / 0.05);
   --shadow-xl: 0 20px 25px rgb(0 0 0 / 0.1), 0 8px 10px rgb(0 0 0 / 0.04);
 
-  /* Transitions */
   --transition-fast:   150ms ease;
   --transition-normal: 300ms ease;
   --transition-slow:   500ms ease;
 
-  /* Layout */
+  /* ── Layout ── */
   --max-width-content: 1200px;
   --max-width-narrow:  720px;
 }
