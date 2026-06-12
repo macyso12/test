@@ -407,6 +407,7 @@
 
 .download-section__inner {
   max-width: var(--max-width-narrow);
+  margin-inline: auto;
 }
 
 .download-section__heading {
