@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Cove — your friend group's home base. Plan trips, split costs, capture memories, and stay close without the chaos." />
-  <meta property="og:title" content="Cove — Your Friend Group's Home Base" />
+  <meta name="description" content="Cove: your friend group's home base. Plan trips, split costs, capture memories, and stay close without the chaos." />
+  <meta property="og:title" content="Cove: Your Friend Group's Home Base" />
   <meta property="og:description" content="A private social platform designed to help real-life friend groups stay connected over time." />
   <meta property="og:image" content="/images/og-image.png" />
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
-  <title>Cove — Your Friend Group's Home Base</title>
+  <title>Cove: Your Friend Group's Home Base</title>
   <link rel="stylesheet" href="/src/css/main.css" />
 </head>
 <body>
@@ -46,27 +46,36 @@
         </picture>
         <div class="hero__overlay" aria-hidden="true"></div>
       </div>
-      <div class="container hero__content">
-        <p class="hero__eyebrow">Introducing Cove</p>
-        <h1 id="hero-heading" class="hero__headline">
-          Your friend group<br />deserves a home base
-        </h1>
-        <p class="hero__subheadline">
-          Cove is a private platform for real-life friend groups. Plan trips together,
-          split costs fairly, preserve your memories, and never let a friendship drift —
-          all in one place.
-        </p>
-        <div id="cta-container" class="hero__cta">
-          <!-- Populated by cta-mode.js -->
-          <noscript>
-            <form class="waitlist-form" action="/api/waitlist" method="POST">
-              <label for="email-noscript" class="visually-hidden">Email address</label>
-              <input type="email" id="email-noscript" name="email" placeholder="you@example.com" required />
-              <button type="submit">Get early access</button>
-            </form>
-          </noscript>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Introducing Cove</p>
+          <h1 id="hero-heading" class="hero__headline">
+            Your friend group<br />deserves a home base
+          </h1>
+          <p class="hero__subheadline">
+            Cove is a private platform for real-life friend groups. Plan trips together,
+            split costs fairly, preserve your memories, and never let a friendship drift.
+            All in one place.
+          </p>
+          <div id="cta-container" class="hero__cta">
+            <!-- Populated by cta-mode.js -->
+            <noscript>
+              <form class="waitlist-form" action="/api/waitlist" method="POST">
+                <label for="email-noscript" class="visually-hidden">Email address</label>
+                <input type="email" id="email-noscript" name="email" placeholder="you@example.com" required />
+                <button type="submit">Get early access</button>
+              </form>
+            </noscript>
+          </div>
+          <p class="hero__disclaimer">Free to start &nbsp;·&nbsp; No spam &nbsp;·&nbsp; iOS &amp; Android</p>
         </div>
-        <p class="hero__disclaimer">Free to start &nbsp;·&nbsp; No spam &nbsp;·&nbsp; iOS &amp; Android</p>
+        <div class="hero__mockup" aria-hidden="true">
+          <div class="phone-frame">
+            <div class="phone-frame__screen">
+              <img src="/images/mockups/screen-home.png" alt="Cove home screen showing garden health and upcoming hangouts" loading="lazy" />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -95,7 +104,7 @@
             </div>
             <h3 class="feature-card__title">Friend Groups</h3>
             <p class="feature-card__desc">
-              Create a private space for your crew. See everyone's events, balances, and memories in one shared view — no more hunting across apps.
+              Create a private space for your crew. See everyone's events, balances, and memories in one shared view. No more hunting across apps.
             </p>
           </article>
 
@@ -107,7 +116,7 @@
             </div>
             <h3 class="feature-card__title">Trip Planning Hub</h3>
             <p class="feature-card__desc">
-              Plan group trips without the 47-message thread. Shared itineraries, destination polls, RSVP tracking, and packing checklists — all in one place.
+              Plan group trips without the 47-message thread. Shared itineraries, destination polls, RSVP tracking, and packing checklists. All in one place.
             </p>
           </article>
 
@@ -119,7 +128,7 @@
             </div>
             <h3 class="feature-card__title">Shared Expenses</h3>
             <p class="feature-card__desc">
-              Log costs, split evenly or by custom amounts, and track who owes what. No awkward conversations — just a fair, running group balance.
+              Log costs, split evenly or by custom amounts, and track who owes what. No awkward conversations. Just a fair, running group balance.
             </p>
           </article>
 
@@ -131,7 +140,7 @@
             </div>
             <h3 class="feature-card__title">Stay in Sync</h3>
             <p class="feature-card__desc">
-              Cove notices when someone hasn't been included lately and gently nudges you. Birthdays, streaks, and social health — so no friendship drifts by accident.
+              Cove notices when someone hasn't been included lately and gently nudges you. Birthdays, streaks, and social health tracked so no friendship drifts by accident.
             </p>
           </article>
 
@@ -143,7 +152,7 @@
             </div>
             <h3 class="feature-card__title">Memory Archive</h3>
             <p class="feature-card__desc">
-              Your group's private story — event albums, shared captions, and "On This Day" moments that resurface the best times and remind you why it matters.
+              Your group's private story: event albums, shared captions, and "On This Day" moments that resurface the best times and remind you why it matters.
             </p>
           </article>
 
@@ -180,45 +189,106 @@
         <ol class="steps" role="list">
 
           <li class="step" data-reveal>
-            <div class="step__number" aria-hidden="true">01</div>
-            <div class="step__icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 48 48" focusable="false">
-                <use href="/src/svg/icons.svg#icon-group" />
-              </svg>
+            <div class="step__body">
+              <div class="step__number" aria-hidden="true">01</div>
+              <div class="step__icon" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 48 48" focusable="false">
+                  <use href="/src/svg/icons.svg#icon-group" />
+                </svg>
+              </div>
+              <h3 class="step__title">Plant your garden</h3>
+              <p class="step__desc">
+                Create your Cove and invite your people. Add friend groups like your Friday Squad, your travel crew, and your close-knit circle. See everyone in one place.
+              </p>
             </div>
-            <h3 class="step__title">Plant your garden</h3>
-            <p class="step__desc">
-              Create your Cove and invite your people. Add friend groups — your Friday Squad, your travel crew, your close-knit circle — and see everyone in one place.
-            </p>
+            <div class="step__mockup" aria-hidden="true">
+              <div class="phone-frame phone-frame--sm">
+                <div class="phone-frame__screen">
+                  <img src="/images/mockups/screen-people.png" alt="Your people screen showing friend groups" loading="lazy" />
+                </div>
+              </div>
+            </div>
           </li>
 
           <li class="step" data-reveal>
-            <div class="step__number" aria-hidden="true">02</div>
-            <div class="step__icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 48 48" focusable="false">
-                <use href="/src/svg/icons.svg#icon-trip" />
-              </svg>
+            <div class="step__body">
+              <div class="step__number" aria-hidden="true">02</div>
+              <div class="step__icon" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 48 48" focusable="false">
+                  <use href="/src/svg/icons.svg#icon-trip" />
+                </svg>
+              </div>
+              <h3 class="step__title">Plan hangouts together</h3>
+              <p class="step__desc">
+                Schedule meetups, track RSVPs, split costs, and build shared itineraries. Everything your whole group can see and act on in one place.
+              </p>
             </div>
-            <h3 class="step__title">Plan hangouts together</h3>
-            <p class="step__desc">
-              Schedule meetups, track RSVPs, split costs, and build shared itineraries — all inside one place your whole group can see and act on.
-            </p>
+            <div class="step__mockup" aria-hidden="true">
+              <div class="phone-frame phone-frame--sm">
+                <div class="phone-frame__screen">
+                  <img src="/images/mockups/screen-hangouts.png" alt="Hangouts screen showing upcoming events" loading="lazy" />
+                </div>
+              </div>
+            </div>
           </li>
 
           <li class="step" data-reveal>
-            <div class="step__number" aria-hidden="true">03</div>
-            <div class="step__icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 48 48" focusable="false">
-                <use href="/src/svg/icons.svg#icon-pulse" />
-              </svg>
+            <div class="step__body">
+              <div class="step__number" aria-hidden="true">03</div>
+              <div class="step__icon" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 48 48" focusable="false">
+                  <use href="/src/svg/icons.svg#icon-pulse" />
+                </svg>
+              </div>
+              <h3 class="step__title">Never let a friendship wilt</h3>
+              <p class="step__desc">
+                Cove tracks your friendship health and nudges you when someone's been left out too long. Real connection takes real time. We help you find it.
+              </p>
             </div>
-            <h3 class="step__title">Never let a friendship wilt</h3>
-            <p class="step__desc">
-              Cove tracks your friendship health and nudges you when someone's been left out too long. Real connection takes real time — we help you find it.
-            </p>
+            <div class="step__mockup" aria-hidden="true">
+              <div class="phone-frame phone-frame--sm">
+                <div class="phone-frame__screen">
+                  <img src="/images/mockups/screen-solobuds.png" alt="Solo buds screen showing friendship health scores" loading="lazy" />
+                </div>
+              </div>
+            </div>
           </li>
 
         </ol>
+      </div>
+    </section>
+
+    <!-- App preview strip -->
+    <section id="preview" class="preview" aria-labelledby="preview-heading">
+      <div class="container">
+        <h2 id="preview-heading" class="section-heading">See it in action</h2>
+        <p class="section-subheading">A look inside the app your friend group has been waiting for.</p>
+        <div class="preview__phones">
+          <div class="preview__phone-wrap" data-reveal>
+            <div class="phone-frame">
+              <div class="phone-frame__screen">
+                <img src="/images/mockups/screen-home.png" alt="Cove home screen with garden health and upcoming hangouts" loading="lazy" />
+              </div>
+            </div>
+            <p class="preview__label">Home</p>
+          </div>
+          <div class="preview__phone-wrap preview__phone-wrap--center" data-reveal>
+            <div class="phone-frame">
+              <div class="phone-frame__screen">
+                <img src="/images/mockups/screen-hangouts.png" alt="Hangouts screen showing RSVPs and upcoming events" loading="lazy" />
+              </div>
+            </div>
+            <p class="preview__label">Hangouts</p>
+          </div>
+          <div class="preview__phone-wrap" data-reveal>
+            <div class="phone-frame">
+              <div class="phone-frame__screen">
+                <img src="/images/mockups/screen-solobuds.png" alt="Your people screen showing friendship health" loading="lazy" />
+              </div>
+            </div>
+            <p class="preview__label">Your People</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -282,13 +352,13 @@
             Texting isn't the same as being there
           </h2>
           <p class="story__body">
-            We built Cove because we noticed something unsettling: you can text a friend every single day and still not have seen them in months. Life gets busy — work, adulting, the endless scroll of obligations — and before you know it, a friendship you genuinely care about has quietly drifted.
+            We built Cove because we noticed something unsettling: you can text a friend every single day and still not have seen them in months. Life gets busy. Work, adulting, the endless scroll of obligations. Before you know it, a friendship you genuinely care about has quietly drifted.
           </p>
           <p class="story__body">
             The hard part isn't caring. It's noticing. Group chats stay active, likes get exchanged, but actual time together stops happening. Real connection is built in person, and it takes intention to protect that.
           </p>
           <p class="story__body">
-            Cove exists to give that intention a home. We track who you've actually spent time with, gently nudge you when someone's been left out too long, and make planning the next hangout as easy as possible — so adulting never has to cost you your friendships.
+            Cove exists to give that intention a home. We track who you've actually spent time with, gently nudge you when someone's been left out too long, and make planning the next hangout as easy as possible. Adulting should never have to cost you your friendships.
           </p>
         </div>
       </div>
@@ -310,7 +380,7 @@
               </span>
             </summary>
             <div class="faq__answer-wrap">
-              <p class="faq__answer">Yes — Cove is free to start. Join the waitlist now and you'll be among the first to access it when we launch.</p>
+              <p class="faq__answer">Yes. Cove is free to start. Join the waitlist now and you'll be among the first to access it when we launch.</p>
             </div>
           </details>
 
@@ -324,7 +394,7 @@
               </span>
             </summary>
             <div class="faq__answer-wrap">
-              <p class="faq__answer">Only the people you invite. Cove is completely private — no public profiles, no algorithmic feed, no strangers. It's just your people.</p>
+              <p class="faq__answer">Only the people you invite. Cove is completely private. No public profiles, no algorithmic feed, no strangers. It's just your people.</p>
             </div>
           </details>
 
@@ -338,7 +408,7 @@
               </span>
             </summary>
             <div class="faq__answer-wrap">
-              <p class="faq__answer">Cove tracks hangout history within your groups and quietly monitors when someone hasn't been included in a while. If a friendship is wilting, we'll nudge you — not guilt you — so you can act before the drift becomes permanent.</p>
+              <p class="faq__answer">Cove tracks hangout history within your groups and quietly monitors when someone hasn't been included in a while. If a friendship is wilting, we'll nudge you (not guilt you) so you can act before the drift becomes permanent.</p>
             </div>
           </details>
 
@@ -352,7 +422,7 @@
               </span>
             </summary>
             <div class="faq__answer-wrap">
-              <p class="faq__answer">For the full experience, yes — but you can invite friends directly from the app and it takes under a minute to set up. The more of your crew is on Cove, the better it works.</p>
+              <p class="faq__answer">For the full experience, yes. But you can invite friends directly from the app and it takes under a minute to set up. The more of your crew is on Cove, the better it works.</p>
             </div>
           </details>
 
@@ -395,8 +465,8 @@
           Your group deserves better<br />than a group chat
         </h2>
         <p class="download-section__subheading">
-          Cove is built for the friendships worth keeping. Free to start —
-          give your crew a proper home.
+          Cove is built for the friendships worth keeping. Free to start.
+          Give your crew a proper home.
         </p>
         <div id="cta-container-bottom" class="download-section__cta">
           <!-- Populated by cta-mode.js -->

@@ -5,23 +5,33 @@
 }
 
 .steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
   list-style: none;
   padding: 0;
   margin: 0;
-  counter-reset: steps;
 }
 
 .step {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: var(--space-2xl);
   background-color: var(--color-neutral-0);
   border-radius: var(--radius-xl);
   padding: var(--space-xl);
   box-shadow: var(--shadow-md);
-  position: relative;
   opacity: 0;
   transform: translateY(24px);
+}
+
+.step:nth-child(even) {
+  grid-template-columns: auto 1fr;
+}
+
+.step:nth-child(even) .step__mockup {
+  order: -1;
 }
 
 .step.visible {
@@ -32,6 +42,16 @@
 
 @media (prefers-reduced-motion: reduce) {
   .step { opacity: 1; transform: none; }
+}
+
+.step__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.step__mockup {
+  display: flex;
+  justify-content: center;
 }
 
 .step__number {
@@ -61,8 +81,117 @@
   line-height: var(--line-height-loose);
 }
 
-@media (max-width: 860px) {
-  .steps { grid-template-columns: 1fr; max-width: 480px; margin-inline: auto; }
+@media (max-width: 700px) {
+  .step,
+  .step:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+  .step:nth-child(even) .step__mockup {
+    order: unset;
+  }
+  .step__mockup { display: none; }
+}
+
+/* ── Phone frame ── */
+.phone-frame {
+  width: 220px;
+  border-radius: 36px;
+  background-color: var(--color-neutral-900);
+  padding: 10px;
+  box-shadow:
+    0 0 0 2px var(--color-neutral-700),
+    var(--shadow-xl);
+  flex-shrink: 0;
+}
+
+.phone-frame--sm {
+  width: 160px;
+  border-radius: 28px;
+  padding: 8px;
+}
+
+.phone-frame__screen {
+  border-radius: 28px;
+  overflow: hidden;
+  background-color: var(--color-sage-100);
+  aspect-ratio: 9 / 19.5;
+}
+
+.phone-frame--sm .phone-frame__screen {
+  border-radius: 22px;
+}
+
+.phone-frame__screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+/* ── App preview strip ── */
+.preview {
+  padding-block: var(--space-3xl);
+  background-color: var(--color-neutral-900);
+}
+
+.preview .section-heading,
+.preview .section-subheading {
+  color: var(--color-neutral-0);
+}
+
+.preview .section-subheading {
+  color: var(--color-neutral-400);
+}
+
+.preview__phones {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: var(--space-xl);
+  margin-top: var(--space-2xl);
+}
+
+.preview__phone-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.preview__phone-wrap.visible {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preview__phone-wrap { opacity: 1; transform: none; }
+}
+
+.preview__phone-wrap--center .phone-frame {
+  width: 240px;
+  transform: translateY(-20px);
+}
+
+.preview__label {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-400);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 680px) {
+  .preview__phones {
+    flex-direction: column;
+    align-items: center;
+  }
+  .preview__phone-wrap--center .phone-frame {
+    transform: none;
+    width: 220px;
+  }
 }
 
 /* ── Why Cove comparison ── */
