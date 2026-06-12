@@ -331,6 +331,11 @@
   justify-content: center;
 }
 
+.download-section__cta .waitlist-form {
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 768px) {
   .testimonials__grid {
     grid-template-columns: 1fr;

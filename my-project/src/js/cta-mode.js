@@ -50,7 +50,7 @@ export function initCtaMode(env = import.meta.env) {
 
   const html = showBadges ? buildStoreBadges(env) : buildWaitlistForm()
 
-  const containerIds = ['cta-container', 'cta-container-features', 'cta-container-bottom']
+  const containerIds = ['cta-container', 'cta-container-bottom']
   containerIds.forEach(id => {
     const el = document.getElementById(id)
     if (el) el.innerHTML = html
