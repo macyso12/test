@@ -28,7 +28,8 @@
       </button>
       <ul class="nav__links" id="nav-links" role="list">
         <li><a href="#features">Features</a></li>
-        <li><a href="#testimonials">Stories</a></li>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#download" class="nav__cta-link">Get early access</a></li>
       </ul>
     </div>
@@ -174,44 +175,165 @@
       </div>
     </div>
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="testimonials" aria-labelledby="testimonials-heading">
+    <!-- How it works -->
+    <section id="how-it-works" class="how-it-works" aria-labelledby="how-it-works-heading">
       <div class="container">
-        <h2 id="testimonials-heading" class="section-heading">Real groups, real stories</h2>
-        <p class="section-subheading">What happens when your friend group actually has a home base.</p>
-        <div class="testimonials__grid">
+        <h2 id="how-it-works-heading" class="section-heading">How Cove works</h2>
+        <p class="section-subheading">Three simple steps to a friendship you'll never let drift.</p>
+        <ol class="steps" role="list">
 
-          <article class="testimonial-card" data-reveal>
-            <blockquote class="testimonial-card__quote">
-              "We used to lose track of who owed what after every trip. Someone always felt short-changed and nobody wanted to bring it up. Cove's expense splitting fixed it completely — it's just facts now, no drama."
-            </blockquote>
-            <cite class="testimonial-card__cite">
-              <span class="testimonial-card__name">James</span>
-              <span class="testimonial-card__context">Using Cove for 5 months</span>
-            </cite>
-          </article>
+          <li class="step" data-reveal>
+            <div class="step__number" aria-hidden="true">01</div>
+            <div class="step__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 48 48" focusable="false">
+                <use href="/src/svg/icons.svg#icon-group" />
+              </svg>
+            </div>
+            <h3 class="step__title">Plant your garden</h3>
+            <p class="step__desc">
+              Create your Cove and invite your people. Add friend groups — your Friday Squad, your travel crew, your close-knit circle — and see everyone in one place.
+            </p>
+          </li>
 
-          <article class="testimonial-card" data-reveal>
-            <blockquote class="testimonial-card__quote">
-              "Planning our annual trip used to take weeks of back-and-forth across three different group chats. With Cove we had destination, dates, and a shared itinerary locked in within a weekend. Genuinely unbelievable."
-            </blockquote>
-            <cite class="testimonial-card__cite">
-              <span class="testimonial-card__name">Amara</span>
-              <span class="testimonial-card__context">Using Cove for 3 months</span>
-            </cite>
-          </article>
+          <li class="step" data-reveal>
+            <div class="step__number" aria-hidden="true">02</div>
+            <div class="step__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 48 48" focusable="false">
+                <use href="/src/svg/icons.svg#icon-trip" />
+              </svg>
+            </div>
+            <h3 class="step__title">Plan hangouts together</h3>
+            <p class="step__desc">
+              Schedule meetups, track RSVPs, split costs, and build shared itineraries — all inside one place your whole group can see and act on.
+            </p>
+          </li>
 
-          <article class="testimonial-card" data-reveal>
-            <blockquote class="testimonial-card__quote">
-              "Cove told me I hadn't included Marcus in anything for almost three months. I felt terrible — but also so grateful I found out before the friendship just quietly disappeared. That feature alone is worth everything."
-            </blockquote>
-            <cite class="testimonial-card__cite">
-              <span class="testimonial-card__name">Priya</span>
-              <span class="testimonial-card__context">Using Cove for 6 months</span>
-            </cite>
-          </article>
+          <li class="step" data-reveal>
+            <div class="step__number" aria-hidden="true">03</div>
+            <div class="step__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 48 48" focusable="false">
+                <use href="/src/svg/icons.svg#icon-pulse" />
+              </svg>
+            </div>
+            <h3 class="step__title">Never let a friendship wilt</h3>
+            <p class="step__desc">
+              Cove tracks your friendship health and nudges you when someone's been left out too long. Real connection takes real time — we help you find it.
+            </p>
+          </li>
 
+        </ol>
+      </div>
+    </section>
+
+    <!-- Why Cove -->
+    <section id="why-cove" class="why-cove" aria-labelledby="why-cove-heading">
+      <div class="container">
+        <h2 id="why-cove-heading" class="section-heading">Why Cove beats the alternative</h2>
+        <p class="section-subheading">Most friend groups cobble together 4+ apps. Cove replaces all of them.</p>
+        <div class="comparison" role="table" aria-label="Cove vs. alternatives comparison">
+          <div class="comparison__header" role="row">
+            <div class="comparison__col-label" role="columnheader"></div>
+            <div class="comparison__col-them" role="columnheader">
+              <span>The usual mess</span>
+              <small>iMessage + Splitwise + Google Photos + Notes</small>
+            </div>
+            <div class="comparison__col-cove" role="columnheader">
+              <span>Cove</span>
+              <small>One home for your whole friend group</small>
+            </div>
+          </div>
+          <div class="comparison__row" role="row">
+            <div class="comparison__label" role="cell">Plan group hangouts</div>
+            <div class="comparison__cell comparison__cell--them" role="cell"><span class="comparison__tag comparison__tag--partial">Group chat chaos</span></div>
+            <div class="comparison__cell comparison__cell--cove" role="cell"><span class="comparison__tag comparison__tag--yes">RSVPs, polls, itineraries</span></div>
+          </div>
+          <div class="comparison__row" role="row">
+            <div class="comparison__label" role="cell">Split expenses fairly</div>
+            <div class="comparison__cell comparison__cell--them" role="cell"><span class="comparison__tag comparison__tag--partial">Separate app, no group context</span></div>
+            <div class="comparison__cell comparison__cell--cove" role="cell"><span class="comparison__tag comparison__tag--yes">Built-in, tied to your group</span></div>
+          </div>
+          <div class="comparison__row" role="row">
+            <div class="comparison__label" role="cell">Save shared memories</div>
+            <div class="comparison__cell comparison__cell--them" role="cell"><span class="comparison__tag comparison__tag--partial">Scattered across albums &amp; chats</span></div>
+            <div class="comparison__cell comparison__cell--cove" role="cell"><span class="comparison__tag comparison__tag--yes">Private group archive</span></div>
+          </div>
+          <div class="comparison__row" role="row">
+            <div class="comparison__label" role="cell">Know who you're drifting from</div>
+            <div class="comparison__cell comparison__cell--them" role="cell"><span class="comparison__tag comparison__tag--no">Doesn't exist</span></div>
+            <div class="comparison__cell comparison__cell--cove" role="cell"><span class="comparison__tag comparison__tag--yes">Friendship health + nudges</span></div>
+          </div>
+          <div class="comparison__row" role="row">
+            <div class="comparison__label" role="cell">Everything in one place</div>
+            <div class="comparison__cell comparison__cell--them" role="cell"><span class="comparison__tag comparison__tag--no">4+ apps, always switching</span></div>
+            <div class="comparison__cell comparison__cell--cove" role="cell"><span class="comparison__tag comparison__tag--yes">One app, your whole group</span></div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Founding story -->
+    <section id="story" class="story" aria-labelledby="story-heading">
+      <div class="container story__inner">
+        <div class="story__icon" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 28 28" focusable="false">
+            <use href="/src/svg/icons.svg#icon-cove-logo" />
+          </svg>
+        </div>
+        <div class="story__content">
+          <p class="story__eyebrow">Why we built Cove</p>
+          <h2 id="story-heading" class="story__heading">
+            Texting isn't the same as being there
+          </h2>
+          <p class="story__body">
+            We built Cove because we noticed something unsettling: you can text a friend every single day and still not have seen them in months. Life gets busy — work, adulting, the endless scroll of obligations — and before you know it, a friendship you genuinely care about has quietly drifted.
+          </p>
+          <p class="story__body">
+            The hard part isn't caring. It's noticing. Group chats stay active, likes get exchanged, but actual time together stops happening. Real connection is built in person, and it takes intention to protect that.
+          </p>
+          <p class="story__body">
+            Cove exists to give that intention a home. We track who you've actually spent time with, gently nudge you when someone's been left out too long, and make planning the next hangout as easy as possible — so adulting never has to cost you your friendships.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <h2 id="faq-heading" class="section-heading">Questions we get asked</h2>
+        <dl class="faq__list">
+
+          <div class="faq__item" data-reveal>
+            <dt class="faq__question">Is Cove free?</dt>
+            <dd class="faq__answer">Yes — Cove is free to start. Join the waitlist now and you'll be among the first to access it when we launch.</dd>
+          </div>
+
+          <div class="faq__item" data-reveal>
+            <dt class="faq__question">Who can see my group?</dt>
+            <dd class="faq__answer">Only the people you invite. Cove is completely private — no public profiles, no algorithmic feed, no strangers. It's just your people.</dd>
+          </div>
+
+          <div class="faq__item" data-reveal>
+            <dt class="faq__question">How does friendship tracking work?</dt>
+            <dd class="faq__answer">Cove tracks hangout history within your groups and quietly monitors when someone hasn't been included in a while. If a friendship is wilting, we'll nudge you — not guilt you — so you can act before the drift becomes permanent.</dd>
+          </div>
+
+          <div class="faq__item" data-reveal>
+            <dt class="faq__question">Does everyone in my group need the app?</dt>
+            <dd class="faq__answer">For the full experience, yes — but you can invite friends directly from the app and it takes under a minute to set up. The more of your crew is on Cove, the better it works.</dd>
+          </div>
+
+          <div class="faq__item" data-reveal>
+            <dt class="faq__question">When does Cove launch?</dt>
+            <dd class="faq__answer">We're in development now. Join the waitlist and you'll get early access before the public launch, plus updates as we build.</dd>
+          </div>
+
+          <div class="faq__item" data-reveal>
+            <dt class="faq__question">Is it available on iOS and Android?</dt>
+            <dd class="faq__answer">Cove will launch on both iOS and Android. Sign up and we'll notify you the moment it's available on your platform.</dd>
+          </div>
+
+        </dl>
       </div>
     </section>
 
