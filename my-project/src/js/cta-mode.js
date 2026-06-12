@@ -11,7 +11,7 @@ function buildWaitlistForm() {
         required
       />
       <button type="submit" class="btn btn--primary">
-        Join the waitlist
+        Get early access
       </button>
     </form>
     <p id="form-message" class="form-message" aria-live="polite"></p>
