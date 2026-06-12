@@ -2,8 +2,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgb(255 255 255 / 0.95);
-  backdrop-filter: blur(8px);
+  background-color: var(--color-neutral-0);
   border-bottom: 1px solid var(--color-neutral-200);
 }
 
