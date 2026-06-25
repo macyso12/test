@@ -10,8 +10,8 @@ nav {
 }
 
 nav.nav--light {
-  background-color: transparent;
-  border-bottom-color: transparent;
+  background-color: var(--color-neutral-0);
+  border-bottom-color: var(--color-neutral-100);
 }
 
 nav.nav--scrolled {
