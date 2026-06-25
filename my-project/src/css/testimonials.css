@@ -379,6 +379,12 @@
 }
 
 .download-section__inner {
+  max-width: 100%;
+}
+
+.download-section__heading,
+.download-section__subheading,
+.btn--waitlist {
   max-width: 560px;
 }
 
