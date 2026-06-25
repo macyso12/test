@@ -310,8 +310,6 @@
 }
 
 .faq__list {
-  max-width: 760px;
-  margin-inline: auto;
   margin-top: var(--space-2xl);
 }
 
