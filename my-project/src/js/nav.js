@@ -1,26 +1,43 @@
 export function initNav() {
   const nav = document.querySelector('nav')
+
   if (nav) {
-    const hero = document.querySelector('#hero')
-    const darkSections = document.querySelectorAll('.download-section, footer')
+    const sections = Array.from(document.querySelectorAll('[data-nav-bg]'))
     const navH = nav.offsetHeight
 
-    const onScroll = () => {
-      const heroBottom = hero ? hero.getBoundingClientRect().bottom : 0
-      const pastHero = heroBottom <= navH
-
-      let overDark = false
-      darkSections.forEach(el => {
+    const updateNavColor = () => {
+      // Find the topmost section currently behind the nav bar
+      let active = null
+      for (const el of sections) {
         const rect = el.getBoundingClientRect()
-        if (rect.top <= navH && rect.bottom > 0) overDark = true
-      })
+        if (rect.top <= navH && rect.bottom > navH) {
+          active = el
+          break
+        }
+      }
+      if (!active) {
+        // Default: transparent over hero-ish top
+        active = sections[0]
+      }
 
-      nav.classList.toggle('nav--scrolled', overDark)
-      nav.classList.toggle('nav--light', pastHero && !overDark)
+      const bg = active.dataset.navBg || 'transparent'
+      const isDark = 'navDark' in active.dataset
+
+      nav.style.backgroundColor = bg === 'transparent' ? '' : bg
+      nav.style.borderBottomColor = 'transparent'
+
+      nav.classList.toggle('nav--scrolled', isDark && bg !== 'transparent')
+      nav.classList.toggle('nav--light', !isDark && bg !== 'transparent')
+
+      // Hero: fully transparent
+      if (bg === 'transparent') {
+        nav.classList.remove('nav--scrolled', 'nav--light')
+        nav.style.backgroundColor = ''
+      }
     }
 
-    window.addEventListener('scroll', onScroll, { passive: true })
-    onScroll()
+    window.addEventListener('scroll', updateNavColor, { passive: true })
+    updateNavColor()
   }
 
   const hamburger = document.querySelector('.nav__hamburger')
@@ -40,10 +57,10 @@ export function initNav() {
     })
   }
 
-  const sections = document.querySelectorAll('main section[id]')
+  const navSections = document.querySelectorAll('main section[id]')
   const navAnchors = document.querySelectorAll('.nav__links a[href^="#"]')
 
-  if (!sections.length || !navAnchors.length) return
+  if (!navSections.length || !navAnchors.length) return
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -54,5 +71,5 @@ export function initNav() {
     })
   }, { threshold: 0.4 })
 
-  sections.forEach(s => observer.observe(s))
+  navSections.forEach(s => observer.observe(s))
 }
