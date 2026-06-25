@@ -6,7 +6,7 @@
 
 .footer__inner {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
   gap: var(--space-3xl);
   padding-bottom: var(--space-3xl);

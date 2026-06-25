@@ -379,7 +379,7 @@
 }
 
 .download-section__inner {
-  max-width: var(--max-width-narrow);
+  max-width: 560px;
 }
 
 .download-section__heading {
