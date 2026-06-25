@@ -220,7 +220,39 @@
 /* ── Why Cove alternating rows ── */
 .why-cove {
   padding-block: 8rem;
-  background-color: var(--color-neutral-0);
+  position: relative;
+  background-color: #faf8f2;
+  overflow: hidden;
+}
+
+/* Blob gradient background */
+.why-cove::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 70% 55% at 10% 15%, rgb(157 190 158 / 0.45) 0%, transparent 65%),
+    radial-gradient(ellipse 55% 45% at 90% 10%, rgb(212 232 213 / 0.55) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 80% 85%, rgb(193 112 74 / 0.2) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 50% at 20% 80%, rgb(232 226 214 / 0.7) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 35% at 55% 50%, rgb(212 232 213 / 0.3) 0%, transparent 55%);
+  animation: why-blobs 14s ease-in-out infinite alternate;
+}
+
+@keyframes why-blobs {
+  0%   { opacity: 0.85; transform: scale(1) translate(0, 0); }
+  50%  { opacity: 1;    transform: scale(1.04) translate(1%, 1%); }
+  100% { opacity: 0.9;  transform: scale(1.02) translate(-1%, 0.5%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .why-cove::before { animation: none; }
+}
+
+.why-cove > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .why-cove__eyebrow {
