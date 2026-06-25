@@ -268,50 +268,34 @@
   align-items: center;
 }
 
-/* ── Realistic iPhone frame ── */
+/* ── iPhone frame using uploaded asset ── */
 .wc-phone {
-  --phone-w: 260px;
-  --phone-border: 10px;
-  --phone-radius: 44px;
-  --screen-radius: 36px;
-
   position: relative;
-  width: var(--phone-w);
+  width: 260px;
   flex-shrink: 0;
-
-  /* Outer shell */
-  background: linear-gradient(160deg, #e8e8e8 0%, #c8c8c8 40%, #b0b0b0 100%);
-  border-radius: var(--phone-radius);
-  padding: var(--phone-border);
-  box-shadow:
-    /* rim highlight */
-    inset 0 1px 0 rgb(255 255 255 / 0.7),
-    inset 0 -1px 0 rgb(0 0 0 / 0.15),
-    /* inner step shadow */
-    inset 0 0 0 1px rgb(0 0 0 / 0.12),
-    /* drop shadow */
-    0 40px 80px rgb(0 0 0 / 0.22),
-    0 12px 24px rgb(0 0 0 / 0.12);
+  /* The frame image sits on top via ::after */
+  filter: drop-shadow(0 32px 64px rgb(0 0 0 / 0.18)) drop-shadow(0 8px 16px rgb(0 0 0 / 0.1));
 }
 
-/* Inner bezel (slightly darker than frame) */
-.wc-phone::before {
+/* Frame image overlay — sits on top of the screenshot */
+.wc-phone::after {
   content: '';
   position: absolute;
-  inset: var(--phone-border);
-  border-radius: calc(var(--phone-radius) - var(--phone-border) + 2px);
-  background: #1a1a1a;
-  z-index: 0;
+  inset: 0;
+  background: url('/images/phone-frame.png') center / 100% 100% no-repeat;
+  pointer-events: none;
+  z-index: 2;
 }
 
-/* Screen crop window */
+/* Screenshot sits inside the screen area of the frame */
 .wc-phone__screen {
   position: relative;
   z-index: 1;
-  border-radius: var(--screen-radius);
+  /* inset matches the screen opening in the frame image */
+  margin: 13% 7% 7%;
+  border-radius: 28px;
   overflow: hidden;
-  width: 100%;
-  height: 360px;
+  height: 320px;
   background: #000;
 }
 
@@ -325,65 +309,9 @@
 .wc-phone__screen--top img { top: 0; }
 .wc-phone__screen--mid img { top: -60px; }
 
-/* Dynamic island pill */
-.wc-phone__island {
-  position: absolute;
-  top: calc(var(--phone-border) + 10px);
-  left: 50%;
-  transform: translateX(-50%);
-  width: 88px;
-  height: 28px;
-  background: #0a0a0a;
-  border-radius: 20px;
-  z-index: 2;
-  box-shadow: 0 0 0 1px rgb(255 255 255 / 0.06);
-}
-
-/* Side buttons */
-.wc-phone__btn-volume-up,
-.wc-phone__btn-volume-down,
-.wc-phone__btn-power {
-  position: absolute;
-  background: linear-gradient(90deg, #b8b8b8, #d0d0d0);
-  border-radius: 2px 0 0 2px;
-}
-
-.wc-phone__btn-volume-up {
-  left: calc(-1 * var(--phone-border) - 3px);
-  top: 18%;
-  width: 4px;
-  height: 36px;
-  border-radius: 2px 0 0 2px;
-  box-shadow: inset 1px 0 0 rgb(255 255 255 / 0.5);
-}
-
-.wc-phone__btn-volume-down {
-  left: calc(-1 * var(--phone-border) - 3px);
-  top: 30%;
-  width: 4px;
-  height: 36px;
-  border-radius: 2px 0 0 2px;
-  box-shadow: inset 1px 0 0 rgb(255 255 255 / 0.5);
-}
-
-.wc-phone__btn-power {
-  right: calc(-1 * var(--phone-border) - 3px);
-  top: 22%;
-  width: 4px;
-  height: 52px;
-  border-radius: 0 2px 2px 0;
-  box-shadow: inset -1px 0 0 rgb(255 255 255 / 0.5);
-}
-
 @media (max-width: 768px) {
-  .wc-phone {
-    --phone-w: 200px;
-    --phone-border: 8px;
-    --phone-radius: 36px;
-    --screen-radius: 28px;
-  }
-  .wc-phone__screen { height: 280px; }
-  .wc-phone__island { width: 70px; height: 22px; top: calc(8px + 8px); }
+  .wc-phone { width: 200px; }
+  .wc-phone__screen { height: 240px; }
 }
 
 .why-cove__row-num {
