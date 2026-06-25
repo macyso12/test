@@ -1,7 +1,16 @@
 /* ── How it works ── */
 .how-it-works {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
   padding-block: var(--space-3xl);
   background: var(--color-neutral-0);
+}
+
+.how-it-works > .container,
+.why-cove > .container,
+.faq > .container {
+  width: 100%;
 }
 
 .hiw-heading {
@@ -190,6 +199,9 @@
 
 /* ── Why Cove ── */
 .why-cove {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
   padding-block: var(--space-3xl);
   background-color: var(--color-warm-white);
 }
@@ -303,6 +315,9 @@
 
 /* ── FAQ accordion ── */
 .faq {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
   padding-block: var(--space-3xl);
   background-color: var(--color-neutral-0);
 }
@@ -373,6 +388,9 @@
 }
 
 .download-section {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
   padding-top: var(--space-3xl);
   padding-bottom: var(--space-xl);
   background: var(--color-leaf-900);

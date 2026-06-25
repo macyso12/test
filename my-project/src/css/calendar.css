@@ -1,4 +1,7 @@
 .approach {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
   padding-top: 7rem;
   padding-bottom: 5rem;
   background: var(--color-warm-white);
