@@ -37,13 +37,13 @@
   font-weight: var(--font-weight-semibold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-neutral-500);
+  color: rgb(255 255 255 / 0.5);
   margin-bottom: var(--space-xs);
 }
 
 .footer__col a {
   font-size: var(--font-size-sm);
-  color: var(--color-neutral-400);
+  color: rgb(255 255 255 / 0.75);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -58,7 +58,7 @@
 
 .footer__bottom p {
   font-size: var(--font-size-xs);
-  color: var(--color-neutral-600);
+  color: rgb(255 255 255 / 0.4);
 }
 
 @media (max-width: 640px) {
