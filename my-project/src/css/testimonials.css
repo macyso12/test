@@ -449,7 +449,7 @@
   top: 58%;
   left: 13%;
   right: 13%;
-  animation: notif-loop 7s cubic-bezier(0.34, 1.4, 0.64, 1) infinite;
+  animation: notif-loop 6s cubic-bezier(0.34, 1.4, 0.64, 1) infinite;
   animation-play-state: paused;
 }
 
@@ -464,13 +464,13 @@
   box-shadow: 0 6px 20px rgb(0 0 0 / 0.25);
 }
 
-/* Slide in → hold longer → slide out → pause → repeat (total 7s) */
+/* Slide in → hold 3.5s → slide out → pause → repeat (total 6s) */
 @keyframes notif-loop {
   0%   { opacity: 0; transform: translateY(-60px); }
-  8%   { opacity: 1; transform: translateY(0); }
-  72%  { opacity: 1; transform: translateY(0); }
-  83%  { opacity: 0; transform: translateY(-60px); }
-  100% { opacity: 0; transform: translateY(-60px); }
+  8%   { opacity: 1; transform: translateY(0); }       /* in by 0.5s */
+  67%  { opacity: 1; transform: translateY(0); }       /* hold until 4s */
+  80%  { opacity: 0; transform: translateY(-60px); }   /* out by 4.8s */
+  100% { opacity: 0; transform: translateY(-60px); }   /* pause until 6s */
 }
 
 @media (prefers-reduced-motion: reduce) {
