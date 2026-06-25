@@ -5,6 +5,7 @@ import { initScrollReveal } from './scroll-reveal.js'
 import { initParallax } from './parallax.js'
 import { initImageTrail } from './image-trail.js'
 import { initWhyCoveParallax } from './why-cove-parallax.js'
+import { initCounters } from './counters.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   initNav()
@@ -14,4 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initParallax()
   initImageTrail()
   initWhyCoveParallax()
+  initCounters()
 })
