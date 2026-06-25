@@ -379,8 +379,12 @@
 }
 
 .download-section__inner {
+  max-width: var(--max-width-content);
+}
+
+.download-section__heading,
+.download-section__subheading {
   max-width: 560px;
-  margin-inline: 0;
 }
 
 .download-section__heading {
