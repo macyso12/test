@@ -372,7 +372,7 @@
 
 .download-section {
   padding-block: var(--space-3xl);
-  background: linear-gradient(135deg, var(--color-leaf-700) 0%, var(--color-leaf-900) 100%);
+  background: var(--color-leaf-900);
   text-align: center;
 }
 
