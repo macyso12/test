@@ -233,6 +233,7 @@
   line-height: var(--line-height-tight);
   letter-spacing: -0.02em;
   margin-bottom: var(--space-sm);
+  will-change: transform;
 }
 
 .why-cove__sub {
@@ -254,6 +255,7 @@
   padding-block: var(--space-2xl);
   border-bottom: 1px solid var(--color-neutral-200);
   align-items: start;
+  will-change: transform;
 }
 
 .why-cove__num {
