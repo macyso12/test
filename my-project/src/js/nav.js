@@ -1,7 +1,11 @@
 export function initNav() {
   const nav = document.querySelector('nav')
   if (nav) {
-    const onScroll = () => nav.classList.toggle('nav--scrolled', window.scrollY > 60)
+    const hero = document.querySelector('#hero')
+    const onScroll = () => {
+      const threshold = hero ? hero.offsetHeight - 80 : 60
+      nav.classList.toggle('nav--scrolled', window.scrollY > threshold)
+    }
     window.addEventListener('scroll', onScroll, { passive: true })
     onScroll()
   }
