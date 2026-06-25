@@ -441,6 +441,33 @@
   color: var(--color-leaf-900);
 }
 
+/* ── Image trail ── */
+.download-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.trail-item {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  will-change: transform, opacity;
+}
+
+.trail-item img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 4px 20px rgb(0 0 0 / 0.25);
+}
+
+.download-section__inner {
+  position: relative;
+  z-index: 1;
+}
+
 @media (max-width: 768px) {
   .testimonials__grid {
     grid-template-columns: 1fr;
