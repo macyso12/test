@@ -1,4 +1,11 @@
 export function initNav() {
+  const nav = document.querySelector('nav')
+  if (nav) {
+    const onScroll = () => nav.classList.toggle('nav--scrolled', window.scrollY > 60)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
+  }
+
   const hamburger = document.querySelector('.nav__hamburger')
   const navLinks = document.getElementById('nav-links')
 
