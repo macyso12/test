@@ -1,7 +1,7 @@
 export function initScrollReveal() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
-  const targets = document.querySelectorAll('.feature-card, .testimonial-card, [data-reveal]')
+  const targets = document.querySelectorAll('.feature-card, .testimonial-card, .hiw-card, [data-reveal]')
   if (!targets.length) return
 
   const observer = new IntersectionObserver((entries) => {
