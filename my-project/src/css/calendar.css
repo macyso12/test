@@ -1,5 +1,6 @@
 .approach {
-  padding-block: var(--space-4xl);
+  padding-top: 7rem;
+  padding-bottom: 5rem;
   background: var(--color-warm-white);
 }
 

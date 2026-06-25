@@ -36,7 +36,7 @@ a:hover {
 /* ── Problem bar ── */
 .problem-bar {
   background-color: var(--color-neutral-900);
-  padding-block: var(--space-2xl);
+  padding-block: var(--space-lg);
 }
 
 .problem-bar__inner {
