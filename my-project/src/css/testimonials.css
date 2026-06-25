@@ -310,6 +310,15 @@
   filter: drop-shadow(0 24px 48px rgb(0 0 0 / 0.14));
 }
 
+.why-cove__mockup-img--lg {
+  max-width: 680px;
+}
+
+/* Row 1 sits closer to row 2 */
+.why-cove__row:first-child {
+  margin-bottom: -2rem;
+}
+
 /* ── Realistic iPhone frame ── */
 .wc-phone {
   --phone-w: 260px;
