@@ -388,11 +388,8 @@
 }
 
 .download-section {
-  min-height: 100svh;
-  display: flex;
-  align-items: center;
   padding-top: var(--space-3xl);
-  padding-bottom: var(--space-xl);
+  padding-bottom: var(--space-3xl);
   background: var(--color-leaf-900);
 }
 
