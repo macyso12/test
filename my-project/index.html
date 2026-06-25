@@ -64,86 +64,101 @@
 
     <!-- Calendar Section -->
     <section id="calendar" class="cal-section" aria-labelledby="cal-heading">
-      <div class="container">
-        <div class="cal-card" aria-hidden="true">
-          <div class="cal-card__tape cal-card__tape--l"></div>
-          <div class="cal-card__tape cal-card__tape--r"></div>
-          <div class="cal-card__header">
-            <span class="cal-card__num">06</span>
-            <span class="cal-card__badge">Friday Squad</span>
-            <span class="cal-card__name">June</span>
-          </div>
-          <div class="cal-card__grid">
-            <div class="cal-dow">Sun</div>
-            <div class="cal-dow">Mon</div>
-            <div class="cal-dow">Tue</div>
-            <div class="cal-dow">Wed</div>
-            <div class="cal-dow">Thu</div>
-            <div class="cal-dow">Fri</div>
-            <div class="cal-dow">Sat</div>
-            <!-- Row 1 -->
-            <div class="cd cd--empty"></div>
-            <div class="cd cd--empty"></div>
-            <div class="cd cd--empty"></div>
-            <div class="cd cd--empty"></div>
-            <div class="cd cd--empty"></div>
-            <div class="cd cd--empty"></div>
-            <div class="cd"><span class="cd__n">1</span></div>
-            <!-- Row 2 -->
-            <div class="cd"><span class="cd__n">2</span></div>
-            <div class="cd"><span class="cd__n">3</span></div>
-            <div class="cd"><span class="cd__n">4</span></div>
-            <div class="cd"><span class="cd__n">5</span></div>
-            <div class="cd"><span class="cd__n">6</span></div>
-            <div class="cd cd--terra">
-              <span class="cd__n">7</span>
-              <span class="cd__sticker">🎮</span>
-              <span class="cd__label">Game Night<br/>@ Kaia's</span>
+      <div class="container cal-section__inner">
+        <div class="cal-section__copy">
+          <p class="cal-section__eyebrow">Your social life, visualized</p>
+          <h2 id="cal-heading" class="cal-section__heading">
+            See your friend time<br />at a glance
+          </h2>
+          <p class="cal-section__body">
+            Cove's shared calendar makes friend hangouts a first-class event.
+            See who's in, track upcoming trips, and spot when things have gone
+            quiet before the drift becomes permanent.
+          </p>
+        </div>
+        <div class="cal-section__widget" aria-hidden="true">
+          <div class="cal-widget">
+            <div class="cal-widget__header">
+              <span class="cal-widget__month">June 2026</span>
+              <span class="cal-widget__group-badge">Friday Squad</span>
             </div>
-            <div class="cd"><span class="cd__n">8</span></div>
-            <!-- Row 3 -->
-            <div class="cd"><span class="cd__n">9</span></div>
-            <div class="cd"><span class="cd__n">10</span></div>
-            <div class="cd"><span class="cd__n">11</span></div>
-            <div class="cd"><span class="cd__n">12</span></div>
-            <div class="cd"><span class="cd__n">13</span></div>
-            <div class="cd"><span class="cd__n">14</span></div>
-            <div class="cd cd--sage">
-              <span class="cd__n">15</span>
-              <span class="cd__sticker">🎬</span>
-              <span class="cd__label">Rooftop<br/>Movie Night</span>
+            <div class="cal-widget__grid">
+              <div class="cal-widget__dow">Sun</div>
+              <div class="cal-widget__dow">Mon</div>
+              <div class="cal-widget__dow">Tue</div>
+              <div class="cal-widget__dow">Wed</div>
+              <div class="cal-widget__dow">Thu</div>
+              <div class="cal-widget__dow">Fri</div>
+              <div class="cal-widget__dow">Sat</div>
+              <!-- Row 1 -->
+              <div class="cal-day cal-day--empty"></div>
+              <div class="cal-day cal-day--empty"></div>
+              <div class="cal-day cal-day--empty"></div>
+              <div class="cal-day cal-day--empty"></div>
+              <div class="cal-day cal-day--empty"></div>
+              <div class="cal-day cal-day--empty"></div>
+              <div class="cal-day">1</div>
+              <!-- Row 2 -->
+              <div class="cal-day">2</div>
+              <div class="cal-day">3</div>
+              <div class="cal-day">4</div>
+              <div class="cal-day">5</div>
+              <div class="cal-day">6</div>
+              <div class="cal-day cal-day--event cal-day--event-terra">
+                <span class="cal-day__num">7</span>
+                <span class="cal-day__label">Game Night</span>
+              </div>
+              <div class="cal-day">8</div>
+              <!-- Row 3 -->
+              <div class="cal-day">9</div>
+              <div class="cal-day">10</div>
+              <div class="cal-day">11</div>
+              <div class="cal-day">12</div>
+              <div class="cal-day">13</div>
+              <div class="cal-day">14</div>
+              <div class="cal-day cal-day--event cal-day--event-sage">
+                <span class="cal-day__num">15</span>
+                <span class="cal-day__label">Rooftop Movie</span>
+              </div>
+              <!-- Row 4 -->
+              <div class="cal-day">16</div>
+              <div class="cal-day">17</div>
+              <div class="cal-day">18</div>
+              <div class="cal-day">19</div>
+              <div class="cal-day">20</div>
+              <div class="cal-day">21</div>
+              <div class="cal-day">22</div>
+              <!-- Row 5 -->
+              <div class="cal-day cal-day--event cal-day--event-terra cal-day--event-span">
+                <span class="cal-day__num">23</span>
+                <span class="cal-day__label">Camping Trip</span>
+              </div>
+              <div class="cal-day cal-day--event cal-day--event-terra cal-day--event-span cal-day--event-mid">
+                <span class="cal-day__num">24</span>
+              </div>
+              <div class="cal-day cal-day--event cal-day--event-terra cal-day--event-span cal-day--event-mid">
+                <span class="cal-day__num">25</span>
+              </div>
+              <div class="cal-day">26</div>
+              <div class="cal-day">27</div>
+              <div class="cal-day cal-day--today">28</div>
+              <div class="cal-day">29</div>
+              <!-- Row 6 -->
+              <div class="cal-day">30</div>
+              <div class="cal-day cal-day--empty"></div>
+              <div class="cal-day cal-day--empty"></div>
+              <div class="cal-day cal-day--empty"></div>
+              <div class="cal-day cal-day--empty"></div>
+              <div class="cal-day cal-day--empty"></div>
+              <div class="cal-day cal-day--empty"></div>
             </div>
-            <!-- Row 4 -->
-            <div class="cd"><span class="cd__n">16</span></div>
-            <div class="cd"><span class="cd__n">17</span></div>
-            <div class="cd"><span class="cd__n">18</span></div>
-            <div class="cd"><span class="cd__n">19</span></div>
-            <div class="cd"><span class="cd__n">20</span></div>
-            <div class="cd"><span class="cd__n">21</span></div>
-            <div class="cd"><span class="cd__n">22</span></div>
-            <!-- Row 5 -->
-            <div class="cd cd--peach">
-              <span class="cd__n">23</span>
-              <span class="cd__sticker">⛺</span>
-              <span class="cd__label">Camping<br/>Weekend</span>
+            <div class="cal-widget__legend">
+              <span class="cal-legend cal-legend--sage">Rooftop Movie Night</span>
+              <span class="cal-legend cal-legend--terra">Camping Weekend</span>
+              <span class="cal-legend cal-legend--terra">Game Night @ Kaia's</span>
             </div>
-            <div class="cd cd--peach cd--cont"><span class="cd__n">24</span></div>
-            <div class="cd cd--peach cd--cont"><span class="cd__n">25</span></div>
-            <div class="cd"><span class="cd__n">26</span></div>
-            <div class="cd"><span class="cd__n">27</span></div>
-            <div class="cd cd--today"><span class="cd__n">28</span></div>
-            <div class="cd"><span class="cd__n">29</span></div>
-            <!-- Row 6 -->
-            <div class="cd"><span class="cd__n">30</span></div>
-            <div class="cd cd--empty"></div>
-            <div class="cd cd--empty"></div>
-            <div class="cd cd--empty"></div>
-            <div class="cd cd--empty"></div>
-            <div class="cd cd--empty"></div>
-            <div class="cd cd--empty"></div>
           </div>
         </div>
-        <p class="cal-section__caption">Your group's hangouts, all in one place.</p>
       </div>
     </section>
 
