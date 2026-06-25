@@ -219,7 +219,7 @@
 
 /* ── Why Cove alternating rows ── */
 .why-cove {
-  padding-block: var(--space-3xl);
+  padding-block: 8rem;
   background-color: var(--color-neutral-0);
 }
 
@@ -230,15 +230,17 @@
   text-transform: uppercase;
   color: var(--color-sage-600);
   margin-bottom: var(--space-md);
+  text-align: center;
 }
 
 .why-cove__heading {
-  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
   font-weight: var(--font-weight-bold);
   color: var(--color-neutral-900);
   line-height: var(--line-height-tight);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   margin-bottom: var(--space-3xl);
+  text-align: center;
 }
 
 .why-cove__rows {
