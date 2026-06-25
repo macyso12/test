@@ -2,7 +2,7 @@ export function initNav() {
   const nav = document.querySelector('nav')
   if (nav) {
     const hero = document.querySelector('#hero')
-    const darkSections = document.querySelectorAll('footer')
+    const darkSections = document.querySelectorAll('.download-section, footer')
     const navH = nav.offsetHeight
 
     const onScroll = () => {

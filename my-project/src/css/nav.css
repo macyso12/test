@@ -15,7 +15,7 @@ nav.nav--light {
 }
 
 nav.nav--scrolled {
-  background-color: var(--color-leaf-900);
+  background-color: var(--color-leaf-700);
   border-bottom-color: rgb(255 255 255 / 0.08);
 }
 
