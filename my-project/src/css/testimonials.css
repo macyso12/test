@@ -186,104 +186,86 @@
   }
 }
 
-/* ── Why Cove comparison ── */
+/* ── Why Cove ── */
 .why-cove {
   padding-block: var(--space-3xl);
-  background-color: var(--color-neutral-0);
-}
-
-.comparison {
-  margin-top: var(--space-xl);
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-}
-
-.comparison__header,
-.comparison__row {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
-}
-
-.comparison__header {
   background-color: var(--color-neutral-900);
-  padding: var(--space-md) var(--space-lg);
-  gap: var(--space-md);
 }
 
-.comparison__col-label { /* empty */ }
+.why-cove__heading {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-neutral-0);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
 
-.comparison__col-them,
-.comparison__col-cove {
+.why-cove__sub {
+  text-align: center;
+  color: var(--color-neutral-400);
+  font-size: var(--font-size-md);
+  max-width: 50ch;
+  margin-inline: auto;
+  margin-bottom: var(--space-3xl);
+}
+
+.why-cove__cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.why-cove__col {
+  border-radius: 16px;
+  padding: var(--space-xl);
+}
+
+.why-cove__col--them {
+  background: rgb(255 255 255 / 0.04);
+  border: 1px solid rgb(255 255 255 / 0.08);
+}
+
+.why-cove__col--cove {
+  background: rgb(157 190 158 / 0.12);
+  border: 1px solid rgb(157 190 158 / 0.3);
+}
+
+.why-cove__col-label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-lg);
+}
+
+.why-cove__col--them .why-cove__col-label { color: var(--color-neutral-500); }
+.why-cove__col--cove .why-cove__col-label { color: var(--color-sage-400); }
+
+.why-cove__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs);
-  padding: var(--space-sm) 0;
-}
-
-.comparison__col-them span,
-.comparison__col-cove span {
-  font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-md);
-}
-
-.comparison__col-them span { color: var(--color-neutral-300); }
-.comparison__col-them small { color: var(--color-neutral-500); font-size: var(--font-size-xs); }
-
-.comparison__col-cove span { color: var(--color-sage-300); }
-.comparison__col-cove small { color: var(--color-neutral-500); font-size: var(--font-size-xs); }
-
-.comparison__row {
   gap: var(--space-md);
-  padding: var(--space-md) var(--space-lg);
-  align-items: center;
-  border-bottom: 1px solid var(--color-neutral-100);
 }
 
-.comparison__row:last-child { border-bottom: none; }
-.comparison__row:nth-child(even) { background-color: var(--color-neutral-50); }
-
-.comparison__label {
+.why-cove__col--them .why-cove__list li {
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-neutral-700);
+  color: var(--color-neutral-500);
 }
 
-.comparison__cell {
-  display: flex;
-  align-items: center;
+.why-cove__col--cove .why-cove__list li {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-200);
 }
 
-.comparison__tag {
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-medium);
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: var(--radius-full);
-  line-height: 1.4;
-}
-
-.comparison__tag--yes {
-  background-color: var(--color-sage-100);
-  color: var(--color-sage-800);
-}
-
-.comparison__tag--partial {
-  background-color: var(--color-neutral-100);
-  color: var(--color-neutral-600);
-}
-
-.comparison__tag--no {
-  background-color: #fef2f2;
-  color: #991b1b;
-}
-
-@media (max-width: 640px) {
-  .comparison__header,
-  .comparison__row {
-    grid-template-columns: 1fr 1fr;
-  }
-  .comparison__col-label,
-  .comparison__label { display: none; }
+@media (max-width: 600px) {
+  .why-cove__cols { grid-template-columns: 1fr; }
 }
 
 /* ── Founding story ── */
