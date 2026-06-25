@@ -199,13 +199,20 @@
 
           <div class="why-cove__row" data-reveal>
             <div class="why-cove__row-visual">
-              <div class="wc-phone">
-                <div class="wc-phone__island" aria-hidden="true"></div>
-                <div class="wc-phone__btn-volume-up" aria-hidden="true"></div>
-                <div class="wc-phone__btn-volume-down" aria-hidden="true"></div>
-                <div class="wc-phone__btn-power" aria-hidden="true"></div>
-                <div class="wc-phone__screen wc-phone__screen--top">
-                  <img src="/images/mockups/screen-people.png" alt="People screen" />
+              <div class="wc-lockscreen" id="lockscreen-row">
+                <!-- Phone frame -->
+                <div class="wc-phone">
+                  <div class="wc-phone__island" aria-hidden="true"></div>
+                  <div class="wc-phone__btn-volume-up" aria-hidden="true"></div>
+                  <div class="wc-phone__btn-volume-down" aria-hidden="true"></div>
+                  <div class="wc-phone__btn-power" aria-hidden="true"></div>
+                  <div class="wc-phone__screen">
+                    <img src="/images/lockscreen.png" alt="Lock screen" />
+                    <!-- Notification overlay -->
+                    <div class="wc-notification" aria-live="polite">
+                      <img src="/images/notification.png" alt="Cove notification: Your plant with Ghaz is wilting" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

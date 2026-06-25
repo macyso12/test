@@ -1,14 +1,26 @@
 export function initWhyCoveParallax() {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-
   const section = document.querySelector('.why-cove')
   if (!section) return
 
+  // Notification trigger on scroll into view
+  const lockscreen = document.querySelector('.wc-lockscreen')
+  if (lockscreen) {
+    const notifObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          lockscreen.classList.add('notif-visible')
+          notifObserver.disconnect()
+        }
+      })
+    }, { threshold: 0.5 })
+    notifObserver.observe(lockscreen)
+  }
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
   const rows = section.querySelectorAll('.why-cove__row')
   const heading = section.querySelector('.why-cove__heading')
-
   const depths = [0.06, 0.04, 0.02]
-
   let ticking = false
 
   const update = () => {
