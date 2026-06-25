@@ -30,20 +30,32 @@
 }
 
 .hiw-card__visual {
-  background: var(--color-neutral-50);
-  border-radius: 20px;
-  overflow: hidden;
+  background: var(--color-sage-50);
+  border-radius: 24px;
   aspect-ratio: 3 / 4;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  padding: var(--space-xl) var(--space-xl) 0;
+  overflow: hidden;
+}
+
+.hiw-card:nth-child(2) .hiw-card__visual {
+  background: rgb(232 226 214 / 0.5);
+}
+
+.hiw-card:nth-child(3) .hiw-card__visual {
+  background: rgb(193 112 74 / 0.08);
 }
 
 .hiw-card__visual img {
-  width: 100%;
-  height: 100%;
+  width: 78%;
+  height: auto;
   object-fit: cover;
   object-position: top;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 12px 40px rgb(0 0 0 / 0.15);
+  display: block;
 }
 
 .hiw-card__body {
