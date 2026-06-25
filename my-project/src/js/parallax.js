@@ -5,16 +5,15 @@ export function initParallax() {
   const content = document.querySelector('.hero__content')
   if (!bg) return
 
-  bg.style.top = '-15%'
-  bg.style.height = '130%'
-
   let ticking = false
 
   function update() {
     const scrollY = window.scrollY
     const heroH = document.querySelector('.hero').offsetHeight
 
-    bg.style.transform = `translateY(${scrollY * 0.4}px)`
+    // Shift background position downward as user scrolls (parallax feel)
+    const offset = 75 + scrollY * 0.02
+    bg.style.backgroundPositionY = `${Math.min(offset, 95)}%`
 
     if (content) {
       const progress = Math.min(scrollY / (heroH * 0.6), 1)
