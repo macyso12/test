@@ -373,7 +373,8 @@
 }
 
 .download-section {
-  padding-block: var(--space-3xl);
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-xl);
   background: var(--color-leaf-900);
   text-align: center;
 }
