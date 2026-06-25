@@ -4,10 +4,10 @@ export function initWhyCoveParallax() {
   const section = document.querySelector('.why-cove')
   if (!section) return
 
-  const cards = section.querySelectorAll('.why-cove__card')
+  const rows = section.querySelectorAll('.why-cove__row')
   const heading = section.querySelector('.why-cove__heading')
 
-  const depths = [0.06, 0.1, 0.04]
+  const depths = [0.06, 0.04, 0.02]
 
   let ticking = false
 
@@ -18,12 +18,13 @@ export function initWhyCoveParallax() {
     const p = Math.max(0, Math.min(1, progress))
 
     if (heading) {
-      heading.style.transform = `translateY(${(p - 0.3) * -30}px)`
+      heading.style.transform = `translateY(${(p - 0.3) * -24}px)`
     }
 
-    cards.forEach((card, i) => {
-      const depth = depths[i] ?? 0.05
-      card.style.transform = `translateY(${(p - 0.4) * -100 * depth}px)`
+    rows.forEach((row, i) => {
+      const depth = depths[i] ?? 0.02
+      const visual = row.querySelector('.why-cove__row-visual img')
+      if (visual) visual.style.transform = `translateY(${(p - 0.5) * -80 * depth}px)`
     })
 
     ticking = false
