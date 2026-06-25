@@ -1,8 +1,17 @@
 export function initScrollReveal() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
-  const targets = document.querySelectorAll('.feature-card, .testimonial-card, .hiw-card, [data-reveal]')
+  const targets = document.querySelectorAll('[data-reveal]')
   if (!targets.length) return
+
+  // Assign stagger delay based on position among siblings in the same parent
+  targets.forEach(el => {
+    const siblings = Array.from(el.parentElement.querySelectorAll('[data-reveal]'))
+    const index = siblings.indexOf(el)
+    if (index > 0) {
+      el.style.transitionDelay = `${index * 0.1}s`
+    }
+  })
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -11,7 +20,7 @@ export function initScrollReveal() {
         observer.unobserve(entry.target)
       }
     })
-  }, { threshold: 0.15 })
+  }, { threshold: 0.12 })
 
   targets.forEach(el => observer.observe(el))
 }
