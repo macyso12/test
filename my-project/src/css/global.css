@@ -112,6 +112,51 @@ a:hover {
   margin-top: var(--space-2xl);
 }
 
+/* ── Marquee ── */
+.marquee-strip {
+  background-color: var(--color-sage-100);
+  padding-block: var(--space-lg);
+  overflow: hidden;
+  border-top: 1px solid var(--color-sage-200);
+  border-bottom: 1px solid var(--color-sage-200);
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.marquee-strip:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-track span {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-sage-700);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.marquee-dot {
+  color: var(--color-terra-500) !important;
+  font-size: 1.2em !important;
+  letter-spacing: 0 !important;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+
 /* ── Scroll reveal ── */
 [data-reveal] {
   opacity: 0;
