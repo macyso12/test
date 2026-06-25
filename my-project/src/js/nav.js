@@ -2,10 +2,23 @@ export function initNav() {
   const nav = document.querySelector('nav')
   if (nav) {
     const hero = document.querySelector('#hero')
+    const darkSections = document.querySelectorAll('.download-section, footer')
+    const navH = nav.offsetHeight
+
     const onScroll = () => {
-      const threshold = hero ? hero.offsetHeight - 80 : 60
-      nav.classList.toggle('nav--scrolled', window.scrollY > threshold)
+      const heroBottom = hero ? hero.getBoundingClientRect().bottom : 0
+      const pastHero = heroBottom <= navH
+
+      let overDark = false
+      darkSections.forEach(el => {
+        const rect = el.getBoundingClientRect()
+        if (rect.top <= navH && rect.bottom > 0) overDark = true
+      })
+
+      nav.classList.toggle('nav--scrolled', overDark)
+      nav.classList.toggle('nav--light', pastHero && !overDark)
     }
+
     window.addEventListener('scroll', onScroll, { passive: true })
     onScroll()
   }
