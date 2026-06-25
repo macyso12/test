@@ -2,16 +2,10 @@ export function initImageTrail() {
   const container = document.querySelector('.download-section')
   if (!container) return
 
-  const images = [
-    '/images/hiw-1.jpg',
-    '/images/hiw-2.jpg',
-    '/images/hiw-3.jpg',
-    '/images/approach-calendar.png',
-  ]
-
+  const emojis = ['🌱', '🌿', '🍃', '🌾', '🌲']
   let currentIndex = 0
   let lastSpawnTime = 0
-  const INTERVAL = 120 // ms between spawns
+  const INTERVAL = 80
 
   const getRelativePos = (e) => {
     const rect = container.getBoundingClientRect()
@@ -26,14 +20,9 @@ export function initImageTrail() {
   const spawnImage = (x, y) => {
     const el = document.createElement('div')
     el.className = 'trail-item'
+    el.textContent = emojis[currentIndex % emojis.length]
 
-    const img = document.createElement('img')
-    img.src = images[currentIndex % images.length]
-    img.alt = ''
-    img.draggable = false
-    el.appendChild(img)
-
-    const rotation = (Math.random() - 0.5) * 30
+    const rotation = (Math.random() - 0.5) * 40
     el.style.left = `${x}px`
     el.style.top = `${y}px`
     el.style.transform = `translate(-50%, -50%) rotate(${rotation}deg) scale(0)`
