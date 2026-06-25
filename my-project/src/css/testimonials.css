@@ -428,61 +428,58 @@
   .wc-phone__island { width: 70px; height: 22px; top: calc(8px + 8px); }
 }
 
-/* ── Lock screen + notification ── */
+/* ── Lock screen + looping notification ── */
 .wc-lockscreen {
-  display: flex;
-  justify-content: center;
-}
-
-.wc-lockscreen .wc-phone__screen {
-  height: 440px;
   position: relative;
-  overflow: hidden;
-  padding: 0;
-}
-
-.wc-lockscreen .wc-phone__screen > img {
+  display: inline-block;
+  max-width: 420px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-  display: block;
-  position: absolute;
-  top: 0; left: 0;
-  z-index: 0;
+  filter: drop-shadow(0 32px 64px rgb(0 0 0 / 0.18));
 }
 
-/* Notification banner */
+.wc-lockscreen__bg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Notification: positioned inside the phone screen area of lockscreen.png */
 .wc-notification {
   position: absolute;
-  top: 12px;
-  left: 10px;
-  right: 10px;
-  z-index: 3;
-  transform: translateY(-130%);
-  opacity: 0;
-  transition: transform 0.6s cubic-bezier(0.34, 1.4, 0.64, 1), opacity 0.4s ease;
+  /* tune these % values to match where the screen starts in the image */
+  top: 14%;
+  left: 8%;
+  right: 8%;
+  animation: notif-loop 4s cubic-bezier(0.34, 1.4, 0.64, 1) infinite;
+  animation-play-state: paused;
+}
+
+.wc-lockscreen.notif-visible .wc-notification {
+  animation-play-state: running;
 }
 
 .wc-notification img {
   width: 100%;
-  border-radius: 16px;
   display: block;
-  box-shadow: 0 8px 24px rgb(0 0 0 / 0.3);
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.25);
 }
 
-.wc-lockscreen.notif-visible .wc-notification {
-  transform: translateY(0);
-  opacity: 1;
-  transition-delay: 0.3s;
+/* Slide in → stay → slide out → pause → repeat  (total 4s) */
+@keyframes notif-loop {
+  0%   { opacity: 0; transform: translateY(-120%); }
+  10%  { opacity: 1; transform: translateY(0); }        /* slide in */
+  55%  { opacity: 1; transform: translateY(0); }        /* hold */
+  70%  { opacity: 0; transform: translateY(-120%); }    /* slide out */
+  100% { opacity: 0; transform: translateY(-120%); }    /* pause before repeat */
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .wc-notification { transition: none; transform: translateY(0); opacity: 1; }
-}
-
-@media (max-width: 768px) {
-  .wc-lockscreen .wc-phone__screen { height: 340px; }
+  .wc-notification {
+    animation: none;
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .why-cove__row-num {

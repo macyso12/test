@@ -2,17 +2,14 @@ export function initWhyCoveParallax() {
   const section = document.querySelector('.why-cove')
   if (!section) return
 
-  // Notification trigger on scroll into view
+  // Start looping notification when lock screen scrolls into view
   const lockscreen = document.querySelector('.wc-lockscreen')
   if (lockscreen) {
     const notifObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          lockscreen.classList.add('notif-visible')
-          notifObserver.disconnect()
-        }
+        lockscreen.classList.toggle('notif-visible', entry.isIntersecting)
       })
-    }, { threshold: 0.5 })
+    }, { threshold: 0.4 })
     notifObserver.observe(lockscreen)
   }
 
