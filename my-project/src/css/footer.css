@@ -1,6 +1,7 @@
 .footer {
   background-color: var(--color-leaf-900);
-  padding-top: var(--space-3xl);
+  padding-top: 8rem;
+  padding-bottom: var(--space-3xl);
 }
 
 .footer__inner {
