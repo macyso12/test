@@ -268,11 +268,52 @@
   align-items: center;
 }
 
-.why-cove__row-visual img {
+/* Phone shell */
+.wc-phone {
   width: 260px;
+  background: var(--color-neutral-900);
+  border-radius: 36px;
+  padding: 10px;
+  box-shadow:
+    0 0 0 1px rgb(255 255 255 / 0.12),
+    0 32px 64px rgb(0 0 0 / 0.18),
+    0 8px 20px rgb(0 0 0 / 0.1);
+}
+
+/* Cropped viewport — shows only part of the screenshot */
+.wc-phone__screen {
   border-radius: 28px;
-  box-shadow: 0 24px 60px rgb(0 0 0 / 0.14), 0 4px 16px rgb(0 0 0 / 0.08);
+  overflow: hidden;
+  width: 100%;
+  /* height controls how much is visible */
+  height: 340px;
+  position: relative;
+}
+
+.wc-phone__screen img {
+  width: 100%;
   display: block;
+  position: absolute;
+  left: 0;
+}
+
+/* Show top of screen (status bar + first content) */
+.wc-phone__screen--top img {
+  top: 0;
+}
+
+/* Show middle of screen (core content) */
+.wc-phone__screen--mid img {
+  top: -60px;
+}
+
+@media (max-width: 768px) {
+  .wc-phone {
+    width: 200px;
+  }
+  .wc-phone__screen {
+    height: 260px;
+  }
 }
 
 .why-cove__row-num {
